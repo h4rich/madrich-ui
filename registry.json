@@ -75,6 +75,18 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "madrich-button",
+      "type": "registry:ui",
+      "title": "Madrich Button",
+      "description": "A neo-brutalist styled button.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/madrich-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

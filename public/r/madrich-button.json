@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "madrich-button",
+  "type": "registry:ui",
+  "title": "Madrich Button",
+  "description": "A neo-brutalist styled button.",
+  "files": [
+    {
+      "path": "registry/new-york/ui/madrich-button.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport * as React from \"react\";\n\nexport type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;\n\nexport function MadrichButton({ className = \"\", ...props }: ButtonProps) {\n  return (\n    <button\n      className={cn(\n        \"border-2 border-foreground\",\n        \"bg-lime-400\",\n        \"text-black\",\n        \"transition-150\",\n        \"px-4 py-2\",\n        \"font-bold uppercase\",\n        \"shadow-[4px_4px_0_0_var(--foreground)]\",\n        \"active:translate-x-[2px]\",\n        \"active:translate-y-[2px]\",\n        \"active:shadow-none\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}
