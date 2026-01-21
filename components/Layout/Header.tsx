@@ -22,7 +22,7 @@ const links = [
     name: "Templates",
     href: "#",
   },
-  {
+   {
     name: "Showcase",
     href: "#",
   }
@@ -77,9 +77,9 @@ const Header = () => {
           </button>
         </div>
       </div>
-
+      
       <div className='z-50 fixed mt-18 h-1 w-full bg-foreground'>
-
+        
       </div>
     </>
   )

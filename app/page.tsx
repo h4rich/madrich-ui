@@ -4,6 +4,7 @@ import Hero from "@/components/Layout/Hero";
 import Features from "@/components/Layout/Features";
 import * as React from "react";
 import Show from "@/components/Layout/Show";
+import QnA from "@/components/Layout/QnA";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
      <Hero />
      <Features />
      <Show />
-    </>
+     <QnA />
+    </> 
   );
 }
