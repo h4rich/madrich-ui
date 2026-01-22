@@ -39,7 +39,7 @@ function QnA() {
 
     return (
         <>
-            <section className="py-20 bg-background font-grotesk">
+            <section className="w-full py-20 bg-background font-grotesk">
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h2 className="text-5xl font-extrabold mb-10 text-[#1ac90a]  border-foreground inline-block">
                         Frequently asked questions

@@ -5,6 +5,7 @@ import Features from "@/components/Layout/Features";
 import * as React from "react";
 import Show from "@/components/Layout/Show";
 import QnA from "@/components/Layout/QnA";
+import Contact from "@/components/Layout/Contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
      <Features />
      <Show />
      <QnA />
+     <Contact />
     </> 
   );
 }

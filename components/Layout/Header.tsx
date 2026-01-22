@@ -67,7 +67,7 @@ const Header = () => {
             </Link>
             <Link
               href="#"
-              className="cursor-pointer ring ring-foreground p-2 shadow-neo h-[33px]"
+              className="cursor-pointer ring ring-foreground p-2 shadow-neo size-[33px]"
             >
               <svg
                 role="img"
@@ -88,7 +88,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="flex items-center space-x-2 border border-foreground h-[33px] pl-2 shadow-neo">
+          <div className="flex items-center space-x-2 border border-foreground h-[34px]  pl-2 shadow-neo">
             <Search />
             <input
               className="outline-none"
