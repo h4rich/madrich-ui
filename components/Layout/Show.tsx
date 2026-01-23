@@ -60,7 +60,7 @@ function Show() {
                 </div>
 
                 <div className="flex items-center justify-center max-w-xl">
-                    <p className="text-2xl font-medium leading-[1.8] text-justify "> <span className="ring ring-[#1ac90a] rounded-sm p-1 shadow-[3px_3px_0px_2px_#1ac90a] mr-1">Neo-Brutalism UI</span> is a bold and expressive design style that focuses on raw layouts, high contrast, and strong visual impact.
+                    <p className="text-2xl font-medium leading-[1.8] text-justify border-foreground border-3 p-8 shadow-neo "> <span className="ring ring-[#1ac90a] rounded-sm p-1 shadow-[3px_3px_0px_2px_#1ac90a] mr-1">Neo-Brutalism UI</span> is a bold and expressive design style that focuses on raw layouts, high contrast, and strong visual impact.
                         It uses solid colors, thick borders, sharp shadows, and oversized typography to create a striking look.
                         Instead of subtle gradients and soft effects, it embraces flat surfaces and intentional roughness.
                         The goal is clarity, confidence, and personality—making interfaces feel modern, playful, and unapologetically different.</p>

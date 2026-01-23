@@ -10,7 +10,7 @@ import { useTheme } from "next-themes";
 const links = [
   {
     name: "Components",
-    href: "#",
+    href: "/components",
   },
   {
     name: "Docs",
@@ -30,12 +30,12 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   return (
     <>
-      <div className="fixed z-50 w-full h-18 font-grotesk flex items-center justify-around p-4 bg-background shadow-lg ">
+      <div className="fixed bg-[#BC96D4] z-100 w-full h-18 font-grotesk flex items-center justify-around p-4 shadow-lg ">
         <div className="flex items-center space-x-10">
-          <h1 className="text-2xl dark:text-neutral-200 font-bold cursor-pointer ring ring-foreground dark:ring-neutral-200 p-2  dark:shadow-[5px_5px_0px_1px_#ffff] shadow-[5px_5px_0px_1px_#000]">
+          <h1 className="text-2xl bg-background font-bold cursor-pointer ring ring-foreground dark:ring-neutral-200 p-2 shadow-neo">
             Madrich UI
           </h1>
-          <div className="flex items-center space-x-4 font-medium text-lg text-neutral-700 dark:text-neutral-200">
+          <div className="flex items-center space-x-4 font-medium text-lg text-foreground">
             {links.map((link) => (
               <Link key={link.name} href={link.href}>
                 {link.name}
@@ -48,7 +48,7 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <Link
               href="#"
-              className="cursor-pointer ring ring-foreground p-2 shadow-neo size-[33px] grid place-items-center"
+              className="cursor-pointer bg-background ring ring-foreground p-2 shadow-neo size-[33px] grid place-items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const Header = () => {
             </Link>
             <Link
               href="#"
-              className="cursor-pointer ring ring-foreground p-2 shadow-neo size-[33px]"
+              className="cursor-pointer bg-background ring ring-foreground p-2 shadow-neo size-[33px]"
             >
               <svg
                 role="img"
@@ -88,7 +88,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="flex items-center space-x-2 border border-foreground h-[34px]  pl-2 shadow-neo">
+          <div className="flex items-center bg-background  space-x-2 border border-foreground h-[34px]  pl-2 shadow-neo">
             <Search />
             <input
               className="outline-none"
@@ -99,7 +99,7 @@ const Header = () => {
 
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="transition-all relative cursor-pointer ring ring-foreground p-2 text-foreground shadow-neo size-[33px]"
+            className="transition-all relative cursor-pointer bg-background ring ring-foreground p-2 text-foreground shadow-neo size-[33px]"
           >
             {theme === "dark" ? (
               <Sun width={18} height={18} />

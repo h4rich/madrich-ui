@@ -1,3 +1,4 @@
+import { Sparkle } from "lucide-react"
 import Image from "next/image"
 
 
@@ -7,6 +8,11 @@ function Contact() {
             <div className="font-grotesk  w-full h-screen relative flex items-center justify-center">
                 <div className="w-6xl h-[600px] border-4 border-foreground flex divide-x-3 divide-foreground shadow-neo">
                     <div className="relative w-1/2 h-full bg-background">
+                        <Sparkle fill="white" strokeWidth={1} className="absolute z-70 size-[40px] top-[148px] left-[350px] " />
+                        <Sparkle fill="white" strokeWidth={1} className="absolute z-70 size-[40px] top-[230px] left-[-168px]  " />
+                        <Sparkle fill="white" strokeWidth={1} className="absolute z-70 size-[50px] top-[415px] left-[80px]  " />
+
+                      
 
                         <div className="absolute z-40 top-[120px] left-[-150px]">
                             <div className="flex gap-3 pl-8 items-center h-[50px] shadow-neo w-[620px] bg-[#E96EBE]  border-3 border-b-3 border-foreground ">
@@ -15,10 +21,10 @@ function Contact() {
                                 <div className="h-6 w-6  rounded-full bg-[#62DA7B] border-4 border-foreground"></div>
                             </div>
                             <div className="p-4 font-press-start-2p flex-col h-[270px] w-[620px]  bg-[#FCF3CB]  shadow-neo border-3 border-t-0 border-foreground ">
-                               <h1 className="my-6">Building something bold?</h1>
-                               <p>Let’s talk. Your feedback helps us shape the future of Neo-Brutal UI.
-                                Share feedback, report issues, or just say hello.
-                               </p>
+                                <h1 className="my-6">Building something bold?</h1>
+                                <p>Let’s talk. Your feedback helps us shape the future of Neo-Brutal UI.
+                                    Share feedback, report issues, or just say hello.
+                                </p>
                             </div>
                         </div>
                         <div className="absolute top-[120px] left-[-150px] rotate-x-4 -rotate-y-4 rotate-z-7">
@@ -35,11 +41,11 @@ function Contact() {
                         <h1 className="text-4xl font-extrabold mb-4 text-[#1ac90a] border-foreground inline-block">Contact Us</h1>
                         <form className="flex flex-col gap-4" action="">
                             <label htmlFor="name" className="after:content-['*'] after:ml-0.5 after:text-red-500 ">Name</label>
-                            <input type="text" id="name" className="w-[400px] p-2 border-2 border-foreground outline-none shadow-neo" />
+                            <input type="text" id="name" placeholder="Enter your name" className="w-[400px] p-2 border-2 border-foreground outline-none shadow-neo" />
                             <label htmlFor="email" className="after:content-['*'] after:ml-0.5 after:text-red-500">Email</label>
-                            <input type="email" id="email" className="w-[400px] p-2 border-2 border-foreground outline-none shadow-neo" />
+                            <input type="email" id="email" placeholder="Enter your email" className="w-[400px] p-2 border-2 border-foreground outline-none shadow-neo" />
                             <label htmlFor="message" className="after:content-['*'] after:ml-0.5 after:text-red-500">Message</label>
-                            <textarea id="message" className="w-[400px] p-2 border-2 border-foreground outline-none shadow-neo"></textarea>
+                            <textarea id="message" placeholder="Enter your message" className="w-[400px] p-2 border-2 border-foreground outline-none shadow-neo"></textarea>
                             <button type="submit" className="p-2 mt-4 bg-[#1ac90a] cursor-pointer border-2 border-foreground shadow-neo text-background">Send</button>
                         </form>
 
