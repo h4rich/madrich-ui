@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Press_Start_2P, Space_Grotesk } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Press_Start_2P,
+  Space_Grotesk,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import { ThemeProvider } from "@/components/theme-provider"
-
-
+import { ThemeProvider } from "@/components/theme-provider";
 
 const pressStart2P = Press_Start_2P({
   variable: "--font-press-start-2p",
   weight: "400",
   subsets: ["latin"],
 });
-
 
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk",
