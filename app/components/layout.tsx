@@ -4,7 +4,7 @@ import React from "react";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="flex pt-18 min-h-screen justify-between">
+    <main className="flex pt-18 h-screen justify-between">
       <LeftSidebar />
       {children}
       <RightSidebar />
