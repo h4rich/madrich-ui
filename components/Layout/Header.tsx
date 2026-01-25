@@ -30,7 +30,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   return (
     <>
-      <div className="fixed bg-[#BC96D4] z-100 w-full h-18 font-grotesk flex items-center justify-around p-4 shadow-lg ">
+      <div className="fixed bg-[#BC96D4] z-[100] w-full h-18 font-grotesk flex items-center justify-around p-4 shadow-lg ">
         <div className="flex items-center space-x-10">
           <h1 className="text-2xl bg-background font-bold cursor-pointer ring ring-foreground dark:ring-neutral-200 p-2 shadow-neo">
             Madrich UI
@@ -116,4 +116,3 @@ const Header = () => {
 };
 
 export default Header;
-

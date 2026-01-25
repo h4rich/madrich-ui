@@ -27,7 +27,7 @@ const Page = ({ params }: PageProps) => {
   if (!comp) return null;
 
   return (
-    <div className="flex flex-col min-h-screen max-w-4xl   ">
+    <div className="flex flex-col min-h-screen max-w-4xl">
       <Header title={comp.title} excerpt={comp.excerpt} />
       <Preview
         render={comp.sections.preview.render}

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const LeftSidebar = () => {
   return (
-    <div className="font-grotesk w-[300px] overflow-y-auto border-r-3 border-foreground">
+    <div className="font-grotesk w-[300px] h-full overflow-y-auto border-r-3 border-foreground scrollbar-hide">
       <div className="pt-2 text-center flex flex-col">
         <h1 className="text-3xl p-2 font-bold border-b-3 border-foreground">
           Components
