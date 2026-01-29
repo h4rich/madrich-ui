@@ -1,10 +1,6 @@
-"use client";
-import { Button } from "@/registry/new-york/ui/button";
-import React from "react";
+import { Button } from "@/registry/new-york/ui/button"
 
-const ButtonDemo = () => {
-  return <Button variant={"default"}>Submit</Button>;
-};
+export default function ButtonDemo() {
+  return <Button>Button</Button>
+}
 
-export default ButtonDemo;
-  
