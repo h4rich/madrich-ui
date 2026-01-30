@@ -2,6 +2,8 @@ import React from "react";
 import AccordionDemo from "@/renders/component/AccordionDemo";
 import ButtonDemo, { ButtonDemo2, ButtonDemo3 } from "@/renders/component/ButtonDemo";
 import AlertDialogDemo from "@/renders/component/AlertDialogDemo";
+import CheckboxDemo from "@/renders/component/CheckboxDemo";
+import AvatarDemo, { AvatarGroupCountExample, AvatarGroupExample } from "@/renders/component/AvatarDemo";
 
 const components: ComponentsMap = {
   Accordion: {
@@ -395,6 +397,208 @@ import { Button } from "@/registry/new-york/ui/button"
     },
   },
 
+  Avatar: {
+    title: "Avatar",
+    slug: "avatar",
+    excerpt:
+      "An image element with a fallback for representing the user.",
+    sections: {
+      preview: {
+        render: AvatarDemo,
+        code: `
+import {Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+
+const AvatarDemo = () => {
+  return (
+   <>
+   <Avatar className='outline-foreground'>
+  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+   </>
+  )
+}
+export default AvatarDemo
+
+        `,
+      },
+      installation: {
+        cli: {
+          pnpm: "pnpm dlx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          npm: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          yarn: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          bun: "bunx --bun shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+        },
+        code: `
+"use client"
+
+import * as AvatarPrimitive from "@radix-ui/react-avatar"
+
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+function Avatar({
+  className,
+  ...props
+}: React.ComponentProps<typeof AvatarPrimitive.Root>) {
+  return (
+    <AvatarPrimitive.Root
+      data-slot="avatar"
+      className={cn(
+        "relative flex size-12 shrink-0 overflow-hidden rounded-full outline-2 outline-background",
+        className,
+      )}
+      {...props}
+    />
+  )
+}
+
+function AvatarImage({
+  className,
+  ...props
+}: React.ComponentProps<typeof AvatarPrimitive.Image>) {
+  return (
+    <AvatarPrimitive.Image
+      data-slot="avatar-image"
+      className={cn("aspect-square size-full", className)}
+      {...props}
+    />
+  )
+}
+
+
+function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="avatar-group"
+      className={cn(
+        "*:data-[slot=avatar]:ring-background group/avatar-group flex -space-x-2 *:data-[slot=avatar]:ring-2",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+
+
+function AvatarFallback({
+  className,
+  ...props
+}: React.ComponentProps<typeof AvatarPrimitive.Fallback>) {
+  return (
+    <AvatarPrimitive.Fallback
+      data-slot="avatar-fallback"
+      className={cn(
+        "flex size-full items-center justify-center rounded-full bg-secondary-background text-foreground font-base",
+        className,
+      )}
+      {...props}
+    />
+  )
+}
+
+function AvatarGroupCount({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="avatar-group-count"
+      className={cn(
+        "bg-hero text-foreground ring-background relative flex size-12 shrink-0 items-center justify-center rounded-full text-sm ring-2 group-has-data-[size=lg]/avatar-group:size-10 group-has-data-[size=sm]/avatar-group:size-6 [&>svg]:size-4 group-has-data-[size=lg]/avatar-group:[&>svg]:size-5 group-has-data-[size=sm]/avatar-group:[&>svg]:size-3",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export { Avatar, AvatarImage,AvatarGroup, AvatarFallback, AvatarGroupCount }
+
+
+
+        `,
+      },
+      usage: {
+        code: [
+          `import {Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+`,
+
+          `<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+
+`,
+        ],
+      },
+      example: {
+        AvatarGroup: {
+          render: AvatarGroupExample,
+          code: `
+import { AvatarGroup,Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+
+export function AvatarGroupExample() {
+  return (
+    <AvatarGroup>
+      <Avatar>
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="https://github.com/maxleiter.png" alt="@maxleiter" />
+        <AvatarFallback>LR</AvatarFallback>
+      </Avatar>
+      <Avatar>
+        <AvatarImage
+          src="https://github.com/evilrabbit.png"
+          alt="@evilrabbit"
+        />
+        <AvatarFallback>ER</AvatarFallback>
+      </Avatar>
+    </AvatarGroup>
+  )
+}
+
+
+        `,
+        },
+        AvatarGroupCount: {
+          render: AvatarGroupCountExample,
+          code: `
+import { AvatarGroup,Avatar, AvatarFallback,AvatarGroupCount, AvatarImage } from '@/registry/new-york/ui/avatar'
+
+export function AvatarGroupCountExample() {
+  return (
+    <AvatarGroup>
+      <Avatar>
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="https://github.com/maxleiter.png" alt="@maxleiter" />
+        <AvatarFallback>LR</AvatarFallback>
+      </Avatar>
+      <Avatar>
+        <AvatarImage
+          src="https://github.com/evilrabbit.png"
+          alt="@evilrabbit"
+        />
+        <AvatarFallback>ER</AvatarFallback>
+      </Avatar>
+      <AvatarGroupCount>+3</AvatarGroupCount>
+    </AvatarGroup>
+  )
+}
+        `,
+        },
+      },
+
+    },
+  },
+
   Button: {
     title: "Button",
     slug: "button",
@@ -491,7 +695,8 @@ export { Button, buttonVariants }
         Neutral: {
           render: ButtonDemo2,
           code: `
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
+
 
 export function ButtonDemo2() {
   return <Button variant="neutral">Button</Button>
@@ -502,7 +707,7 @@ export function ButtonDemo2() {
         NoShadow: {
           render: ButtonDemo3,
           code: `
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
 
 export function ButtonDemo3() {
   return <Button variant="noShadow">Button</Button>
@@ -511,9 +716,90 @@ export function ButtonDemo3() {
         `,
         },
       },
-      
+
     },
   },
+
+  Checkbox: {
+    title: "Checkbox",
+    slug: "checkbox",
+    excerpt:
+      "A control that allows the user to toggle between checked and not checked.",
+    sections: {
+      preview: {
+        render: CheckboxDemo,
+        code: `
+import { Checkbox } from '@/registry/new-york/ui/checkbox'
+
+const CheckboxDemo = () => {
+    return (
+        <> <Checkbox />  </>
+    )
+}
+
+export default CheckboxDemo
+        `,
+      },
+      installation: {
+        cli: {
+          pnpm: "pnpm dlx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          npm: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          yarn: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          bun: "bunx --bun shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+        },
+        code: `
+"use client"
+
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import { Check } from "lucide-react"
+
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+function Checkbox({
+  className,
+  ...props
+}: React.ComponentProps<typeof CheckboxPrimitive.Root>) {
+  return (
+    <CheckboxPrimitive.Root
+      data-slot="checkbox"
+      className={cn(
+        "peer size-5 shrink-0 outline-2 outline-foreground ring-offset-white focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-hero data-[state=checked]:text-foreground",
+        className,
+      )}
+      {...props}
+    >
+      <CheckboxPrimitive.Indicator
+        data-slot="checkbox-indicator"
+        className={cn("flex items-center justify-center text-current")}
+      >
+        <Check className="size-4 text-main-foreground" />
+      </CheckboxPrimitive.Indicator>
+    </CheckboxPrimitive.Root>
+  )
+}
+
+export { Checkbox }
+
+
+        `,
+      },
+      usage: {
+        code: [
+          `import { Checkbox } from '@/registry/new-york/ui/checkbox'
+`,
+
+          `<Checkbox />
+`,
+        ],
+      },
+
+    },
+  },
+
+  
+
 
 
 
