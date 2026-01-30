@@ -4,6 +4,8 @@ import ButtonDemo, { ButtonDemo2, ButtonDemo3 } from "@/renders/component/Button
 import AlertDialogDemo from "@/renders/component/AlertDialogDemo";
 import CheckboxDemo from "@/renders/component/CheckboxDemo";
 import AvatarDemo, { AvatarGroupCountExample, AvatarGroupExample } from "@/renders/component/AvatarDemo";
+import ImageCardDemo from "@/renders/component/ImageCardDemo";
+import InputDemo,{InputDisabledDemo, InputFileDemo, InputWithLabelDemo ,InputWithButtonDemo} from "@/renders/component/InputDemo";
 
 const components: ComponentsMap = {
   Accordion: {
@@ -798,7 +800,221 @@ export { Checkbox }
     },
   },
 
-  
+  ImageCard: {
+    title: "Image Card",
+    slug: "image-card",
+    excerpt:
+      "A card component optimized for displaying images with captions.",
+    sections: {
+      preview: {
+        render: ImageCardDemo,
+        code: `
+import ImageCard from '@/registry/new-york/ui/image-card'
+
+const ImageCardDemo = () => {
+  return (
+   <>
+    <ImageCard
+      caption="Image"
+      imageUrl="https://storage.googleapis.com/pod_public/750/270384.jpg"
+    ></ImageCard>
+   </>
+  )
+}
+
+export default ImageCardDemo
+        `,
+      },
+      installation: {
+        cli: {
+          pnpm: "pnpm dlx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          npm: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          yarn: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          bun: "bunx --bun shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+        },
+        code: `
+import { cn } from "@/lib/utils"
+
+type Props = {
+  imageUrl: string
+  caption: string
+  className?: string
+}
+
+export default function ImageCard({ imageUrl, caption, className }: Props) {
+  return (
+    <figure
+      className={cn(
+        "w-[250px] overflow-hidden rounded-base border-2 border-foreground font-base shadow-neo",
+        className,
+      )}
+    >
+      <img className="w-full aspect-4/3 object-cover object-top " src={imageUrl} alt="image" />
+      <figcaption className="border-t-2 text-main-foreground border-foreground p-4">
+        {caption}
+      </figcaption>
+    </figure>
+  )
+}
+
+
+        `,
+      },
+      usage: {
+        code: [
+          `import ImageCard from '@/registry/new-york/ui/image-card'
+`,
+
+          ` <ImageCard
+        caption="Image"
+        imageUrl="https://storage.googleapis.com/pod_public/750/270384.jpg">
+</ImageCard>
+`,
+        ],
+      },
+
+    },
+  },
+
+  Input: {
+    title: "Input",
+    slug: "input",
+    excerpt:
+      "Displays a form input field or a component that looks like an input field.",
+    sections: {
+      preview: {
+        render: InputDemo,
+        code: `
+import { Input } from '@/registry/new-york/ui/input'
+
+const InputDemo = () => {
+  return (
+    <>
+    <Input className="w-[200px]" type="email" placeholder="Email" />
+    </>
+  )
+}
+export default InputDemo
+
+        `,
+      },
+      installation: {
+        cli: {
+          pnpm: "pnpm dlx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          npm: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          yarn: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          bun: "bunx --bun shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+        },
+        code: `
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+  return (
+    <input
+      type={type}
+      data-slot="input"
+      className={cn(
+        "flex shadow-neo h-10 w-full rounded-base border-2 border-foreground bg-secondary-background selection:bg-main selection:text-main-foreground px-3 py-2 text-sm font-base text-foreground file:border-0 file:bg-transparent file:text-sm file:font-heading placeholder:text-foreground/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
+        className,
+      )}
+      {...props}
+    />
+  )
+}
+
+export { Input }
+
+        `,
+      },
+      usage: {
+        code: [
+          `import { Input } from '@/registry/new-york/ui/input'
+`,
+
+          `<Input className="w-[200px]" type="email" placeholder="Email" />
+`,
+        ],
+      },
+      example: {
+        File: {
+          render: InputFileDemo,
+          code: `
+import { Input } from '@/registry/new-york/ui/input'
+
+export const InputFileDemo = () => {
+  return (
+    <div className="grid w-full max-w-64 items-center gap-1.5">
+      <label className='font-semibold' htmlFor="picture">Picture</label>
+      <Input id="picture" type="file" />
+    </div>
+  )
+}
+
+
+        `,
+        },
+        Disabled: {
+          render: InputDisabledDemo,
+          code: `
+import { Input } from '@/registry/new-york/ui/input'
+
+export const InputDisabledDemo = () => {
+  return (
+    <Input
+      className="max-w-[200px]"
+      type="email"
+      placeholder="Email"
+      disabled
+    />
+  )
+}
+
+        `,
+        },
+         WithLabel: {
+          render: InputWithLabelDemo,
+          code: `
+import { Input } from '@/registry/new-york/ui/input'
+
+export const InputWithLabelDemo = () => {
+  return (
+    <div className="grid max-w-[200px] items-center gap-1.5">
+      <label className='font-semibold' htmlFor="email">Email</label>
+      <Input type="email" id="email" placeholder="Email" />
+    </div>
+  )
+}
+
+
+        `,
+        },
+
+       WithButton: {
+          render: InputWithButtonDemo,
+          code: `
+import { Button } from "@/registry/new-york/ui/button"
+import { Input } from '@/registry/new-york/ui/input'
+
+export  const InputWithButtonDemo = () => {
+  return (
+    <div className="flex w-full max-w-sm items-center space-x-4">
+      <Input type="email" placeholder="Email" />
+      <Button variant="default" type="submit">
+        Subscribe
+      </Button>
+    </div>
+  )
+}
+        `,
+        },
+      },
+
+    },
+  },
+
+
 
 
 
