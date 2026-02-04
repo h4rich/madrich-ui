@@ -9,6 +9,7 @@ import InputDemo, { InputDisabledDemo, InputFileDemo, InputWithLabelDemo, InputW
 import ProgressDemo from "@/renders/component/ProgressDemo";
 import SelectDemo, { SelectDemo2, SelectDemo3, SelectDemo4 } from "@/renders/component/SelectDemo";
 import SwitchDemo from "@/renders/component/SwitchDemo";
+import TextareaDemo from "@/renders/component/TextareaDemo";
 
 const components: ComponentsMap = {
   Accordion: {
@@ -1622,6 +1623,77 @@ import { Switch } from "@/registry/new-york/ui/switch"
 
     },
   },
+
+  Textarea: {
+    title: "Textarea",
+    slug: "textarea",
+    excerpt:
+      "Displays a form textarea or a component that looks like a textarea.",
+    sections: {
+      preview: {
+        render: TextareaDemo,
+        code: `
+import React from 'react'
+import { Textarea } from "@/registry/new-york/ui/textarea"
+
+const TextareaDemo = () => {
+  return (
+    <Textarea placeholder="Type your message here." />
+  )
+}
+
+export default TextareaDemo
+
+
+
+        `,
+      },
+      installation: {
+        cli: {
+          pnpm: "pnpm dlx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          npm: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          yarn: "npx shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+          bun: "bunx --bun shadcn@latest add https://neobrutalism.dev/r/accordion.json",
+        },
+        code: `
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
+  return (
+    <textarea
+      data-slot="textarea"
+      className={cn(
+        "flex min-h-[80px] w-[500px] rounded-base border-2 border-foreground bg-secondary-background selection:bg-main selection:text-main-foreground px-3 py-2 text-sm font-base text-foreground placeholder:text-foreground/50 focus-visible:outline-none shadow-neo disabled:cursor-not-allowed disabled:opacity-50",
+        className,
+      )}
+      {...props}
+    />
+  )
+}
+
+export { Textarea }
+
+
+        `,
+      },
+      usage: {
+        code: [
+          `
+import { Textarea } from "@/registry/new-york/ui/textarea"
+
+`,
+
+          `<Textarea placeholder="Type your message here." />
+
+`,
+        ],
+      },
+
+    },
+  },
+
 
 
 
