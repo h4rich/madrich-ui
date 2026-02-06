@@ -1685,7 +1685,7 @@ import { Textarea } from "@/registry/new-york/ui/textarea"
 
 `,
 
-          `<Textarea placeholder="Type your message here." />
+          ` <Textarea placeholder="Type your message here." />
 
 `,
         ],

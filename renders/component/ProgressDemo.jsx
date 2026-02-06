@@ -13,7 +13,7 @@ const ProgressDemo = () => {
     }, [])
     return (
         <>
-            <Progress value={progress} className="w-[60%]" />
+            <Progress value={progress} className="w-[400px]" />
         </>
     )
 }
