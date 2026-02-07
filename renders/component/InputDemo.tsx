@@ -34,7 +34,7 @@ export const InputDisabledDemo = () => {
 
 export const InputWithLabelDemo = () => {
   return (
-    <div className="grid max-w-[200px] items-center gap-1.5">
+    <div className="grid max-w-[300px] items-center gap-1.5">
       <label className='font-semibold' htmlFor="email">Email</label>
       <Input type="email" id="email" placeholder="Email" />
     </div>

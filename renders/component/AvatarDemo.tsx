@@ -55,7 +55,20 @@ export function AvatarGroupCountExample() {
         />
         <AvatarFallback>ER</AvatarFallback>
       </Avatar>
-      <AvatarGroupCount>+3</AvatarGroupCount>
+       <Avatar>
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+       <Avatar>
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+      
+       <Avatar>
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+      <AvatarGroupCount>+7</AvatarGroupCount>
     </AvatarGroup>
   )
 }
