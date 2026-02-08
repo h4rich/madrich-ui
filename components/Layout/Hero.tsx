@@ -2,13 +2,13 @@ import { Button } from "@/registry/new-york/ui/button"
 import { CircleX, CodeXml, Link2, Plus, Search, X } from "lucide-react"
 import Link from "next/link"
 import { Input } from "@/registry/new-york/ui/input"
-import { Avatar, AvatarFallback, AvatarGroupCount, AvatarImage } from '@/registry/new-york/ui/avatar'
+import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from '@/registry/new-york/ui/avatar'
 import { FcApproval } from "react-icons/fc";
 import ProgressDemo from "@/renders/component/ProgressDemo"
 import Image from "next/image"
 import { FaGoogle } from "react-icons/fa";
 import { Textarea } from "@/registry/new-york/ui/textarea"
-import { AvatarGroupCountExample } from "@/renders/component/AvatarDemo"
+import { AvatarGroupCountExample, AvatarGroupExample } from "@/renders/component/AvatarDemo"
 import { InputWithLabelDemo } from "@/renders/component/InputDemo"
 import { IoIosAlert } from "react-icons/io";
 
@@ -19,7 +19,7 @@ const Hero = () => {
         <>
             <div className="relative font-grotesk flex justify-between h-screen w-full overflow-hidden">
                 <div className="flex flex-col gap-3 pl-20 justify-between w-[60%]">
-                    <div className="flex flex-col gap-4 mt-30">
+                    <div className="flex flex-col gap-4 mt-40 ">
                         <h1 className="text-6xl font-bold leading-[1.4]  tracking-wide"><span className="ring-2 ring-hero bg-background  p-1  shadow-[6px_6px_0px_2px_var(--hero)]">Neo-Brutal</span> UI for <br /> Bold Builders.</h1>
                         <p className="text-lg leading-[1.5]  " >A neo-brutalist UI library for <span className="font-bold text-hero">developers</span> who hate boring design.  <br />
                             Sharp borders, bold colors, zero fluff — just <span className="font-bold text-hero">components</span> that stand out.</p>
@@ -29,8 +29,14 @@ const Hero = () => {
                     </div>
 
                     <div className="flex justify-between mr-16">
-                        <div>
+                        <div className="flex relative">
+                            <div className="w-30 h-30 border-3 border-background rounded-full hover:z-20 hover:scale-[1.1] transition-all duration-300 bg-white">
+                                <Image src="/image/one.png" alt="hero" width={100} height={100} quality={100} className="h-full w-full rounded-full object-cover object-top" />
+                            </div>
+                            <div className="absolute left-25 w-30 h-30 border-3 border-background bg-white hover:scale-[1.1] transition-all duration-300 rounded-full z-10">
+                                <Image src="/image/two.jpg" alt="hero" width={100} height={100} className="h-full w-full rounded-full object-cover" />
 
+                            </div>
                         </div>
 
                         <div className="flex flex-col gap-8">
@@ -40,7 +46,7 @@ const Hero = () => {
                                 <div className="flex gap-2 items-center">
                                     <IoIosAlert className="size-6" />
                                     <h2 className="font-semibold text-lg">Information</h2>
-                                    
+
                                 </div>
                                 <X />
 
@@ -124,11 +130,29 @@ const Hero = () => {
 
                             <ProgressDemo />
 
-                            <div className="flex h-10 gap-6">
-                                <div className="border border-foreground w-[100px] p-1 px-5 font-semibold bg-[#FFC900] rounded-sm shadow-neo ">
+                            <div className="flex h-10 gap-5">
+                                <div className="flex items-center gap-3 border border-foreground w-[120px] p-1 px-2 font-semibold bg-[#FFC900] rounded-sm shadow-neo ">
+                                    <div className="h-7 w-7 border-2 border-foreground rounded-sm">
+                                        <Image src="/image/icon.jfif" alt="@shadcn" width={100} height={100} className="h-full w-full rounded-[4px] object-fill" />
+
+                                    </div>
+                                    <h2>Orla </h2>
+                                    <X className="size-4" />
                                 </div>
-                                <div className="border border-foreground w-[100px] p-1 px-5 font-semibold bg-[#11A365] rounded-lg shadow-neo "></div>
-                                <div className="border border-foreground w-[100px] p-1 px-5 font-semibold bg-[#FF7051] rounded-full shadow-neo "></div>
+                                <div className="flex items-center gap-3 border border-foreground w-[120px] p-1 px-2 font-semibold bg-[#11A365] rounded-lg shadow-neo ">
+                                    <div className="h-7 w-7 border-2 border-foreground rounded-md">
+                                        <Image src="/image/icon2.jpg" alt="@shadcn" width={100} height={100} className="h-full w-full rounded-sm object-cover" />
+                                    </div>
+                                    <h2>Orla </h2>
+                                    <X className="size-4" />
+                                </div>
+                                <div className="flex items-center gap-3 border border-foreground w-[120px] p-1 px-2 font-semibold bg-[#FF7051] rounded-full shadow-neo ">
+                                    <div className="h-7 w-7 border-2 border-foreground rounded-full">
+                                        <Image src="/image/icon3.jfif" alt="@shadcn" width={100} height={100} className="h-full w-full rounded-full object-cover" />
+                                    </div>
+                                    <h2>Orla </h2>
+                                    <X className="size-4" />
+                                </div>
                             </div>
 
                             <div className="w-[400px] p-4 bg-background flex gap-4 h-30 shadow-neo rounded-sm border-2 border-foreground ">
@@ -152,7 +176,7 @@ const Hero = () => {
 
                             <div>
                                 <div className="w-[300px] outline-2 outline-hero flex gap-3 items-center rounded-sm rounded-r-none justify-start pl-4 h-11 bg-background  border-2 border-r-0 border-foreground">
-                                    <div className="h-7 w-7 border-2 border-foreground rounded-full"></div>
+                                    <div className="h-7 w-7     border-2 border-foreground rounded-full"></div>
                                     <h1>peter parker</h1>
                                 </div>
 
