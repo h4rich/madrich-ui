@@ -6,6 +6,7 @@ import React from "react";
 import { Moon, Sun } from "lucide-react";
 
 import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 
 const links = [
   {
@@ -45,7 +46,6 @@ const Header = () => {
 
         <div className="flex items-center space-x-6 p-[4px]">
           <Social />
-
           <SearchBar />
           <Mode />
         </div>
@@ -127,11 +127,14 @@ export const SearchBar = ({ className }: { className?: string }) => {
   return (
     <>
       <div
-        className={`flex items-center bg-background space-x-2 outline outline-foreground h-[33px] pl-2 shadow-neo  overflow-hidden ${className}`}
+        className={cn(
+          `flex items-center justify-between bg-background space-x-2 outline outline-foreground h-[33px] px-2 shadow-neo overflow-hidden`,
+          className,
+        )}
       >
-        <Search className="size-[18px]" />
+        <Search size={22} />
         <input
-          className="outline-none"
+          className="outline-none w-full"
           type="text"
           placeholder="Search Components"
         />

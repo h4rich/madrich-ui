@@ -2,9 +2,9 @@ import RenderCode from "./RenderCode";
 
 const Usage = ({ code }: { code: string[] }) => {
   return (
-    <div className="w-4xl mt-6 font-grotesk">
-      <h2 className="text-2xl font-bold">Usage</h2>
-      <div className="flex flex-col gap-6 mt-6 ">
+    <div className="w-full max-w-4xl mt-4 sm:mt-6 font-grotesk">
+      <h2 className="text-xl sm:text-2xl font-bold">Usage</h2>
+      <div className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-6">
         <RenderCode
           data={code[0]}
           className="shadow-neo border-2 border-foreground"

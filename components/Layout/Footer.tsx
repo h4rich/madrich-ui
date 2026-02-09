@@ -6,19 +6,15 @@ import { FaGithub } from "react-icons/fa";
 const links = [
   {
     name: "Components",
-    href: "#",
+    href: "/components",
   },
   {
-    name: "Docs",
-    href: "#",
+    name: "Privacy Policy",
+    href: "/privay-policy",
   },
   {
-    name: "Templates",
-    href: "#",
-  },
-  {
-    name: "Showcase",
-    href: "#",
+    name: "Terms & Conditions",
+    href: "/terms-and-conditions",
   },
 ];
 
@@ -63,12 +59,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Side */}
-        {/* Right Side */}
         <div className="flex flex-col md:flex-row justify-end gap-12 md:gap-24">
           <div className="flex flex-col gap-6">
             <h3 className="text-2xl font-black uppercase border-b-4 border-foreground pb-2 inline-block w-fit">
-              Explore
+              Links
             </h3>
             <nav className="flex flex-col gap-3">
               {links.map((link) => (

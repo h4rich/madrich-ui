@@ -16,20 +16,22 @@ const Installation = ({ cli, code }: { cli: CLI; code: string }) => {
   const [activeCli, setActiveCli] = useState<keyof CLI>("pnpm");
 
   return (
-    <div className="w-4xl mt-6 font-grotesk">
-      <h2 className="text-2xl font-bold font-grotesk">Installation</h2>
-      <div className="border-2 shadow-neo mt-6 border-foreground bg-background">
+    <div className="w-full max-w-4xl mt-4 sm:mt-6 font-grotesk">
+      <h2 className="text-xl sm:text-2xl font-bold font-grotesk">
+        Installation
+      </h2>
+      <div className="border-2 shadow-neo mt-4 sm:mt-6 border-foreground bg-background">
         <div className="flex border-b-2 border-foreground">
           <button
             onClick={() => setActiveMain("cli")}
-            className={`w-1/2 py-3 font-bold border-r-2 border-foreground
+            className={`w-1/2 py-2 sm:py-3 text-sm sm:text-base font-bold border-r-2 border-foreground
           ${activeMain === "cli" ? "bg-hero" : "bg-background"}`}
           >
             CLI
           </button>
           <button
             onClick={() => setActiveMain("manual")}
-            className={`w-1/2 py-3 font-bold
+            className={`w-1/2 py-2 sm:py-3 text-sm sm:text-base font-bold
           ${activeMain === "manual" ? "bg-hero" : "bg-background"}`}
           >
             Manual
@@ -38,12 +40,12 @@ const Installation = ({ cli, code }: { cli: CLI; code: string }) => {
 
         {activeMain === "cli" && (
           <div className="w-full">
-            <div className="grid grid-cols-4 border-b-2 border-foreground w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-4 border-b-2 border-foreground w-full">
               {Object.keys(cli).map((tool) => (
                 <button
                   key={tool}
                   onClick={() => setActiveCli(tool as keyof CLI)}
-                  className={`py-2 font-semibold border-r-2 border-foreground last:border-r-0
+                  className={`py-2 text-sm sm:text-base font-semibold border-r-2 border-b-2 sm:border-b-0 border-foreground last:border-r-0 sm:[&:nth-child(2)]:border-r-2
           ${activeCli === tool ? "bg-hero" : "bg-background"}`}
                 >
                   {tool}
