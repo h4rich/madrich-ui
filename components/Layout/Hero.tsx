@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="relative font-grotesk flex justify-between h-screen w-full mask-b-from-90% overflow-hidden">
                 <div className="flex flex-col gap-3 pl-20 justify-between w-[60%]">
                     <div className="flex flex-col gap-4 mt-40 ">
-                        <h1 className="text-6xl font-bold leading-[1.4]  tracking-wide"><span className="ring-2 ring-hero bg-background  p-1  shadow-[6px_6px_0px_2px_var(--hero)]">Neo-Brutal</span> UI for <br /> Bold Builders.</h1>
+                        <h1 className="text-6xl font-bold leading-[1.4]  tracking-wide"><span className="border-4 border-black bg-hero p-2 px-4 shadow-[8px_8px_0px_0px_#000] inline-block transition-all duration-200 hover:shadow-[16px_16px_0px_0px_#000] hover:-translate-y-2 hover:-translate-x-2 hover:-rotate-2 hover:bg-[#FFC900] cursor-pointer active:translate-x-0 active:translate-y-0 active:shadow-none active:rotate-0">Neo-Brutal</span> UI for <br /> Bold Builders.</h1>
                         <p className="text-lg leading-[1.5]  " >A neo-brutalist UI library for <span className="font-bold text-hero">developers</span> who hate boring design.  <br />
                             Sharp borders, bold colors, zero fluff — just <span className="font-bold text-hero">components</span> that stand out.</p>
                         <div className=" mt-5">
