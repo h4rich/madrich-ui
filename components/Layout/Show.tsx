@@ -1,76 +1,142 @@
-import { Asterisk, Minus, Plus, Star } from "lucide-react"
+import { Box, Code, Layers, MousePointer2 } from "lucide-react"
+import { Button } from "@/registry/new-york/ui/button"
+
+
+import AccordionDemo from "@/renders/component/AccordionDemo"
+import { AvatarGroupCountExample } from "@/renders/component/AvatarDemo"
+import CheckboxDemo from "@/renders/component/CheckboxDemo"
+import ImageCardDemo from "@/renders/component/ImageCardDemo"
+import SelectDemo from "@/renders/component/SelectDemo"
+import SwitchDemo from "@/renders/component/SwitchDemo"
+import { Input } from "@/registry/new-york/ui/input"
 
 function Show() {
     return (
-        <>
-            <div className="flex items-center justify-evenly gap-10 h-screen w-full font-grotesk">
-                <div className="relative ml-50 ">
-                    <div className="flex items-center justify-center w-[300px] h-[550px] border-2  border-foreground rounded-[45px] shadow-[-5px_5px_0px_1px_#000]">
-                        <div className="relative bg-[#80C551] w-[260px] h-[510px] border-2 border-t-0 rounded-[25px] border-foreground">
-                            <div className="absolute w-[60px] h-[30px] left-[-2px] top-[-1px] border-2 border-foreground inset-0 border-b-transparent border-r-transparent rounded-tl-[25px] ">
-                            </div>
-                            <div className="absolute w-[60px] h-[30px]  left-[198px] top-[-1px] border-2 border-foreground inset-0 border-b-transparent border-l-transparent rounded-tr-[25px] ">
-                            </div>
-                            <div className="absolute left-1/2  top-[-1px] z-10 h-5 w-36 -translate-x-1/2 rounded-b-2xl border-2 border-foreground border-t-0 bg-background" />
-                        </div>
+        <section className="relative w-full min-h-screen font-grotesk bg-[#f0f0f0] overflow-hidden py-24 px-6 md:px-12">
 
-                        <div className="flex items-center justify-center text-9xl text-black font-extrabold tracking-[10px] shadow-[-5px_5px_0px_1px_#000] h-32 w-[350px] bg-white border-2 border-foreground absolute inset-0 top-23 left-[-100px] rounded-xl">
-                            NEO </div>
-                        <div className="absolute flex items-center justify-center text-7xl text-black tracking-[8px] shadow-[-5px_5px_0px_1px_#000] font-extrabold h-28 w-[550px] inset-0 top-[245px] left-[-150px] border-2 border-foreground bg-white rounded-xl">
-                            BRUTALISM </div>
-                        <div className="flex items-start p-4 flex-col gap-2 justify-center text-black bg-[#F9D52F] h-20 border-2 border-foreground rounded-xl shadow-[-5px_5px_0px_1px_#000] w-[200px] absolute inset-0 top-[380px] left-[-100px]">
-                            <p className="h-2 w-[160px] bg-black rounded-xl"></p>
-                            <div className="flex gap-2">
-                                <p className="h-2 w-[50px] bg-black rounded-xl"></p>
-                                <p className="h-2 w-[80px] bg-black rounded-xl"></p>
-                            </div>
-                            <p className="h-2 w-[145px] bg-black rounded-xl"></p>
+            {/* Background pattern */}
+            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }}>
+            </div>
 
-                        </div>
+            <div className="relative z-10 max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-                        <div className="flex items-center justify-center absolute inset-0 h-20 w-20 bg-[#F9D52F] border-2 border-foreground shadow-[-5px_5px_0px_1px_#000] rounded-xl left-[280px] top-[120px] ">
-                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Youtubemusic--Streamline-Simple-Icons" height={50} width={50} ><desc>{"\n    Youtubemusic Streamline Icon: https://streamlinehq.com\n  "}</desc><title>{"YouTube Music"}</title><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12 -5.376 12 -12S18.624 0 12 0zm0 19.104c-3.924 0 -7.104 -3.18 -7.104 -7.104S8.076 4.896 12 4.896s7.104 3.18 7.104 7.104 -3.18 7.104 -7.104 7.104zm0 -13.332c-3.432 0 -6.228 2.796 -6.228 6.228S8.568 18.228 12 18.228s6.228 -2.796 6.228 -6.228S15.432 5.772 12 5.772zM9.684 15.54V8.46L15.816 12l-6.132 3.54z" fill="#000000" strokeWidth={1} /></svg>
-                        </div>
-
-                        <div className="flex flex-col items-center justify-center absolute inset-0 h-[220px] w-[100px] bg-[#4DC1C2] rounded-xl left-[-290px] top-[60px] border-2 border-foreground shadow-[-5px_5px_0px_1px_#000]">
-                            <Plus className="size-15" />
-                            <Minus className="size-15" />
-                            <Asterisk className="size-15" />
-
-                        </div>
-
-                        <div className="flex items-center justify-center absolute inset-0 h-[210px] w-[100px] bg-[#FF9C64] rounded-xl left-[440px] top-[280px] border-2 border-foreground shadow-[-5px_5px_0px_1px_#000]">
-                            <div className="relative flex flex-col items-center justify-center gap-2">
-                                <div className="h-10 w-10  rounded-full border-3 border-foreground"></div>
-                                <div className="h-10 w-10  rounded-full border-3 border-foreground"></div>
-                                <div className="h-10 w-10  rounded-full border-3 border-foreground"></div>
-                                <div className="absolute h-[170px] w-1 bg-foreground"></div>
-
-                            </div>
-
-                        </div>
-
-
+                {/* Left Column: Title & Info */}
+                <div className="lg:col-span-5 flex flex-col justify-center gap-8 lg:sticky lg:top-24 h-fit">
+                    <div className="inline-flex w-fit items-center gap-2 border-2 border-foreground bg-[#E9DCFE] px-4 py-1.5 text-sm font-bold shadow-[4px_4px_0px_0px_#000]">
+                        <Box className="h-4 w-4" />
+                        <span>COMPONENT LIBRARY</span>
                     </div>
 
+                    <h2 className="text-5xl md:text-7xl font-extrabold uppercase leading-[0.9] tracking-tight">
+                        Built for <br />
+                        <span className="bg-[#FFC900] px-2 shadow-[6px_6px_0px_0px_#000] border-2 border-foreground inline-block mt-2 rotate-[-2deg]">Speed</span> & <span className="text-stroke-2 text-transparent md:text-foreground">Scale</span>
+                    </h2>
+
+                    <p className="text-xl font-medium md:max-w-md border-l-4 border-foreground pl-6 py-2">
+                        A complete set of neo-brutalist components ready to drop into your next project.
+                        Accessible, responsive, and boldly different.
+                    </p>
 
 
 
-
+                    <div className="mt-12 p-6 border-2 border-foreground bg-white shadow-[8px_8px_0px_0px_#000] relative group overflow-hidden">
+                        <div className="absolute top-0 right-0 p-2 bg-foreground text-white font-bold text-xs">NEW</div>
+                        <h3 className="font-bold text-xl mb-2 flex items-center gap-2">
+                            <Code className="h-5 w-5" />
+                            Developer Experience
+                        </h3>
+                        <p className="text-sm font-medium text-gray-600 mb-4">
+                            Copy-paste code, customize with Tailwind, and ship faster than ever.
+                        </p>
+                        <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden border border-foreground">
+                            <div className="h-full bg-[#11A365] w-[85%]"></div>
+                        </div>
+                        <div className="mt-2 text-xs font-bold text-right">85% COMPLETE</div>
+                    </div>
                 </div>
 
-                <div className="flex items-center justify-center max-w-xl">
-                    <p className="text-2xl font-medium leading-[1.8] text-justify border-foreground border-3 p-8 shadow-neo "> <span className="ring ring-[#1ac90a] rounded-sm p-1 shadow-[3px_3px_0px_2px_#1ac90a] mr-1">Neo-Brutalism UI</span> is a bold and expressive design style that focuses on raw layouts, high contrast, and strong visual impact.
-                        It uses solid colors, thick borders, sharp shadows, and oversized typography to create a striking look.
-                        Instead of subtle gradients and soft effects, it embraces flat surfaces and intentional roughness.
-                        The goal is clarity, confidence, and personality—making interfaces feel modern, playful, and unapologetically different.</p>
+                {/* Right Column: Component Showcase Grid */}
+                <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    {/* Card 1: Input & Forms */}
+                    <div className="flex flex-col gap-6 p-6 md:p-8 bg-white border-2 border-foreground shadow-[8px_8px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200">
+                        <div className="flex items-center justify-between border-b-2 border-foreground pb-4 mb-2">
+                            <h4 className="font-bold text-lg uppercase flex items-center gap-2">
+                                <MousePointer2 className="h-5 w-5" /> Forms
+                            </h4>
+                            <div className="flex gap-1">
+                                <span className="h-3 w-3 rounded-full bg-[#FF7051] border border-foreground"></span>
+                                <span className="h-3 w-3 rounded-full bg-[#FFC900] border border-foreground"></span>
+                                <span className="h-3 w-3 rounded-full bg-[#11A365] border border-foreground"></span>
+                            </div>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="grid w-full items-center gap-1.5">
+                                <label className='font-bold text-sm' htmlFor="name">Full Name</label>
+                                <Input type="text" id="name" placeholder="John Doe" />
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <CheckboxDemo />
+                                <span className="font-bold text-sm">Agree to terms</span>
+                            </div>
+                            <SwitchDemo />
+                            <Button className="w-full">Submit</Button>
+                        </div>
+                    </div>
+
+                    {/* Card 2: Interactive & Feedback */}
+                    <div className="flex flex-col gap-6 p-6 md:p-8 bg-[#E9DCFE] border-2 border-foreground shadow-[8px_8px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200">
+                        <div className="flex items-center justify-between border-b-2 border-foreground pb-4 mb-2">
+                            <h4 className="font-bold text-lg uppercase flex items-center gap-2">
+                                <Layers className="h-5 w-5" /> Feedback
+                            </h4>
+                        </div>
+                        <div className="space-y-6 py-2">
+                            <div className="p-4 bg-[#80C551] border-2 border-foreground shadow-[4px_4px_0px_0px_#000]">
+                                <p className="font-bold text-foreground">Action Successful!</p>
+                                <p className="text-sm font-medium mt-1">Your changes have been saved.</p>
+                            </div>
+
+                            <div className="p-4 bg-[#FF7051] border-2 border-foreground shadow-[4px_4px_0px_0px_#000]">
+                                <p className="font-bold text-foreground">Error</p>
+                                <p className="text-sm font-medium mt-1">Please check your internet connection.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Card 3: Content & Layout */}
+                    <div className="md:col-span-2 flex flex-col md:flex-row gap-6 p-6 md:p-8 bg-[#FFC900] border-2 border-foreground shadow-[8px_8px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200">
+                        <div className="md:w-1/2 space-y-6">
+                            <div className="bg-white p-4 border-2 border-foreground shadow-[4px_4px_0px_0px_#000]">
+                                <AccordionDemo />
+                            </div>
+                            <SelectDemo />
+                        </div>
+                        <div className="md:w-1/2 space-y-6 flex flex-col justify-between">
+                            <div className="bg-white p-6 border-2 border-foreground shadow-[4px_4px_0px_0px_#000] flex flex-col items-center justify-center gap-4">
+                                <AvatarGroupCountExample />
+                                <p className="text-center text-sm font-bold text-gray-500">
+                                    +2,400 happy developers
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Card 4: Media */}
+                    <div className="md:col-span-2 p-6 md:p-8 bg-white border-2 border-foreground shadow-[8px_8px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200">
+                        <div className="flex items-center justify-between border-b-2 border-foreground pb-4 mb-6">
+                            <h4 className="font-bold text-lg uppercase">Media Cards</h4>
+                        </div>
+                        <div className="flex justify-center">
+                            <ImageCardDemo />
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
-            <div className='z-50 h-1 w-full bg-foreground'>
 
-            </div>
-        </>
+        </section>
     )
 }
 

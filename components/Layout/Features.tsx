@@ -3,70 +3,109 @@ import {
     Layers,
     Square,
     Code2,
+    Zap,
+    Layout,
+    Box,
+    Type
 } from "lucide-react";
 
+const features = [
+    {
+        title: "Tailwind CSS",
+        description: "Utility-first styling for rapid, flexible, and brutally simple customization.",
+        icon: Palette,
+        color: "bg-[#FFC900]",
+        className: "md:col-span-2"
+    },
+    {
+        title: "Shadcn/UI",
+        description: "Built on accessible primitives with full ownership—no locked-in styles.",
+        icon: Layers,
+        color: "bg-white",
+    },
+    {
+        title: "Neo-Brutalism",
+        description: "Hard borders, sharp corners, and high contrast. Design that refuses to be subtle.",
+        icon: Square,
+        color: "bg-[#80C551]",
+    },
+    {
+        title: "Developer First",
+        description: "Clean markup and predictable structure you can drop straight into production.",
+        icon: Code2,
+        color: "bg-[#E9DCFE]",
+        className: "md:col-span-2"
+    },
+    {
+        title: "Responsive",
+        description: "Layouts that adapt perfectly to any device size.",
+        icon: Layout,
+        color: "bg-white",
+    },
+    {
+        title: "Typography",
+        description: "Bold fonts that make a statement.",
+        icon: Type,
+        color: "bg-[#FF7051]",
+    },
+];
 
 function Features() {
     return (
-        <>
-            <section className="relative bg-background font-grotesk px-6 py-32">
-                <div className="mx-auto max-w-6xl">
-                    <h2 className="mb-16 border-2 border-foreground bg-background  text-[#1ac90a] shadow-[5px_5px_0px_1px_#000] px-6 py-4 text-4xl font-extrabold">
-                        Why This Library Exists
-                    </h2>
-
-                    <div className="grid gap-8 md:grid-cols-2">
-                        <div className="border-2 border-foreground bg-background shadow-[5px_5px_0px_1px_#000] p-6">
-                            <Palette className="mb-4 h-10 w-10 stroke-[3]" /> 
-                            <h3 className="text-xl text-[#1ac90a] font-extrabold">
-                                Made with Tailwind CSS
-                            </h3>
-                            <p className="mt-2 font-medium">
-                                Utility-first styling that keeps your UI fast, flexible,
-                                and brutally simple to customize.
-                            </p>
-                        </div>
-
-                        <div className="border-2 border-foreground bg-background shadow-[5px_5px_0px_1px_#000] p-6">
-                            <Layers className="mb-4 h-10 w-10 stroke-[3]" />
-                            <h3 className="text-xl text-[#1ac90a] font-extrabold">
-                                Uses shadcn/ui
-                            </h3>
-                            <p className="mt-2 font-medium">
-                                Built on accessible, composable components with full
-                                ownership — no locked-in styles.
-                            </p>
-                        </div>
-
-                        <div className="border-2 border-foreground bg-background shadow-[5px_5px_0px_1px_#000] p-6">
-                            <Square className="mb-4 h-10 w-10 stroke-[3]" />
-                            <h3 className="text-xl text-[#1ac90a] font-extrabold">
-                                Neo-Brutal Design
-                            </h3>
-                            <p className="mt-2 font-medium">
-                                Hard borders, sharp corners, and bold contrast —
-                                design that refuses to be subtle.
-                            </p>
-                        </div>
-
-                        <div className="border-2 border-foreground bg-background shadow-[5px_5px_0px_1px_#000] p-6">
-                            <Code2 className="mb-4 h-10 w-10 stroke-[3]" />
-                            <h3 className="text-xl text-[#1ac90a] font-extrabold">
-                                Developer-First
-                            </h3>
-                            <p className="mt-2 font-medium">
-                                Clean markup, predictable structure, and examples you
-                                can drop straight into production.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-            </section>
-            <div className='h-1 w-full bg-foreground'>
-
+        <section className="relative font-grotesk px-6 py-24 bg-white overflow-hidden">
+            {/* Background decorative pattern */}
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }}>
             </div>
-        </>
+
+            {/* Floating text decoration */}
+            <div className="absolute top-10 right-10 -rotate-12 hidden lg:block pointer-events-none">
+                <div className="bg-foreground text-white font-black text-xl px-4 py-2 shadow-[4px_4px_0px_0px_#80C551]">
+                    FEATURE PACKED
+                </div>
+            </div>
+
+            <div className="mx-auto max-w-7xl relative z-10">
+                <div className="mb-16 text-center">
+                    <h2 className="text-5xl md:text-7xl font-black uppercase text-foreground mb-6">
+                        Why This <span className="bg-[#FFC900] px-2 shadow-[6px_6px_0px_0px_#000] border-2 border-foreground inline-block -rotate-2">Library</span> Exists
+                    </h2>
+                    <p className="text-xl font-bold max-w-2xl mx-auto border-2 border-foreground p-4 bg-white shadow-[4px_4px_0px_0px_#000]">
+                        We stripped away the polish to give you raw, unopinionated, and bold building blocks.
+                    </p>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+                    {features.map((feature, index) => (
+                        <div
+                            key={index}
+                            className={`
+                                group relative border-3 border-foreground p-8 shadow-[8px_8px_0px_0px_#000] 
+                                hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] 
+                                transition-all duration-200 flex flex-col justify-between
+                                ${feature.color} ${feature.className || ''}
+                            `}
+                        >
+                            <div className="mb-6">
+                                <div className="bg-white w-14 h-14 border-2 border-foreground flex items-center justify-center shadow-[4px_4px_0px_0px_#000] mb-4 group-hover:scale-110 transition-transform">
+                                    <feature.icon className="h-8 w-8 stroke-[2.5]" />
+                                </div>
+                                <h3 className="text-2xl font-black uppercase mb-3">
+                                    {feature.title}
+                                </h3>
+                                <p className="font-bold text-lg leading-relaxed opacity-90">
+                                    {feature.description}
+                                </p>
+                            </div>
+
+                            <div className="self-end">
+                                <Box className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
     )
 }
 

@@ -1,14 +1,13 @@
 import { Button } from "@/registry/new-york/ui/button"
 import { CircleX, CodeXml, Link2, Plus, Search, X } from "lucide-react"
 import Link from "next/link"
-import { Input } from "@/registry/new-york/ui/input"
-import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from '@/registry/new-york/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
 import { FcApproval } from "react-icons/fc";
 import ProgressDemo from "@/renders/component/ProgressDemo"
 import Image from "next/image"
 import { FaGoogle } from "react-icons/fa";
 import { Textarea } from "@/registry/new-york/ui/textarea"
-import { AvatarGroupCountExample, AvatarGroupExample } from "@/renders/component/AvatarDemo"
+import { AvatarGroupCountExample } from "@/renders/component/AvatarDemo"
 import { InputWithLabelDemo } from "@/renders/component/InputDemo"
 import { IoIosAlert } from "react-icons/io";
 
@@ -17,7 +16,7 @@ const Hero = () => {
 
     return (
         <>
-            <div className="relative font-grotesk flex justify-between h-screen w-full overflow-hidden">
+            <div className="relative font-grotesk flex justify-between h-screen w-full mask-b-from-90% overflow-hidden">
                 <div className="flex flex-col gap-3 pl-20 justify-between w-[60%]">
                     <div className="flex flex-col gap-4 mt-40 ">
                         <h1 className="text-6xl font-bold leading-[1.4]  tracking-wide"><span className="ring-2 ring-hero bg-background  p-1  shadow-[6px_6px_0px_2px_var(--hero)]">Neo-Brutal</span> UI for <br /> Bold Builders.</h1>
@@ -34,7 +33,7 @@ const Hero = () => {
                                 <Image src="/image/one.png" alt="hero" width={100} height={100} quality={100} className="h-full w-full rounded-full object-cover object-top" />
                             </div>
                             <div className="absolute left-25 w-30 h-30 border-3 border-background bg-white hover:scale-[1.1] transition-all duration-300 rounded-full z-10">
-                                <Image src="/image/two.jpg" alt="hero" width={100} height={100} className="h-full w-full rounded-full object-cover" />
+                                <Image src="/image/icon4.jpg" alt="hero" width={100} height={100} className="h-full w-full rounded-full object-cover object-top" />
 
                             </div>
                         </div>
@@ -49,10 +48,7 @@ const Hero = () => {
 
                                 </div>
                                 <X />
-
-
                             </div>
-
                         </div>
 
                     </div>
@@ -76,7 +72,7 @@ const Hero = () => {
                     <div className="flex justify-between">
                         <Button className="w-[220px] rounded-sm h-11 text-lg">Button CTA</Button>
                         <Button className="w-[220px] rounded-sm h-11 bg-background text-lg">Button CTA</Button>
-                        <Button className="w-[220px] rounded-sm h-11 bg-foreground text-background rounded-tr-none text-lg">Button CTA</Button>
+                        <Button className="w-[220px] rounded-sm h-11 bg-[#11A365] text-foreground border-r-0 rounded-r-none text-lg">Button CTA</Button>
                     </div>
 
                     <div className="flex justify-between  mt-5">
@@ -156,7 +152,9 @@ const Hero = () => {
                             </div>
 
                             <div className="w-[400px] p-4 bg-background flex gap-4 h-30 shadow-neo rounded-sm border-2 border-foreground ">
-                                <div className="h-11 w-11 border-2 border-foreground rounded-full"></div>
+                                <div className="h-11 w-11 border-2 border-foreground rounded-full">
+                                    <Image src="/image/icon4.jpg" alt="@shadcn" width={100} height={100} className="h-full w-full rounded-full object-cover object-top" />
+                                </div>
                                 <div>
                                     <h2>John Snow</h2>
                                     <p className="text-sm text-neutral-500">Sent you an invite to connect</p>
@@ -176,40 +174,19 @@ const Hero = () => {
 
                             <div>
                                 <div className="w-[300px] outline-2 outline-hero flex gap-3 items-center rounded-sm rounded-r-none justify-start pl-4 h-11 bg-background  border-2 border-r-0 border-foreground">
-                                    <div className="h-7 w-7     border-2 border-foreground rounded-full"></div>
-                                    <h1>peter parker</h1>
+                                    <div className="h-8 w-8 border-2 border-foreground rounded-full">
+                                        <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" alt="@shadcn" width={100} height={100} className="h-full w-full rounded-full object-cover" />
+                                    </div>
+                                    <h1>Michael Brown</h1>
                                 </div>
 
-                                <div className="w-[300px] h-[300px] mt-2 grid grid-cols-1 grid-rows-6 rounded-sm rounded-r-none   bg-background  border-2 border-r-0 border-foreground">
-                                    <div className="w-full flex hover:bg-hero items-center p-2 gap-3">
-                                        <div className="h-8 w-8 border-2 border-foreground rounded-full"></div>
-                                        <h1>peter parker</h1>
-                                    </div>
-
-                                    <div className="w-full flex hover:bg-hero items-center p-2 gap-3">
-                                        <div className="h-8 w-8 border-2 border-foreground rounded-full"></div>
-                                        <h1>peter parker</h1>
-                                    </div>
-
-                                    <div className="w-full flex hover:bg-hero items-center p-2 gap-3">
-                                        <div className="h-8 w-8 border-2 border-foreground rounded-full"></div>
-                                        <h1>peter parker</h1>
-                                    </div>
-
-                                    <div className="w-full flex hover:bg-hero items-center p-2 gap-3">
-                                        <div className="h-8 w-8 border-2 border-foreground rounded-full"></div>
-                                        <h1>peter parker</h1>
-                                    </div>
-
-                                    <div className="w-full flex hover:bg-hero items-center p-2 gap-3">
-                                        <div className="h-8 w-8 border-2 border-foreground rounded-full"></div>
-                                        <h1>peter parker</h1>
-                                    </div>
-
-                                    <div className="w-full flex hover:bg-hero items-center p-2 gap-3">
-                                        <div className="h-8 w-8 border-2 border-foreground rounded-full"></div>
-                                        <h1>peter parker</h1>
-                                    </div>
+                                <div className="w-[300px] h-[300px] mt-2 grid grid-cols-1 shadow-neo grid-rows-6 rounded-sm rounded-r-none bg-background  border-2 border-r-0 border-foreground">
+                                    <Profile name="Sarah Wilson" image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" />
+                                    <Profile name="James Miller" image="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop" />
+                                    <Profile name="Emily Davis" image="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop" />
+                                    <Profile name="Michael Brown" image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" className="bg-hero" />
+                                    <Profile name="Jessica Taylor" image="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop" />
+                                    <Profile name="David Anderson" image="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop" />
                                 </div>
                             </div>
 
@@ -218,7 +195,6 @@ const Hero = () => {
                             <div className="w-[300px] flex flex-col justify-center items-start pl-5 gap-2 h-30 border-2 border-foreground border-r-0 bg-background">
                                 <h2 className="text-md text-neutral-800">Total Income</h2>
                                 <h2 className="text-4xl font-semibold">$129,000.00</h2>
-
                             </div>
 
                         </div>
@@ -236,3 +212,21 @@ const Hero = () => {
 }
 
 export default Hero
+
+
+
+
+const Profile = (props: { name: string, className?: string, image: string }) => {
+    return (
+        <>
+            <div className={`w-full flex items-center p-2 gap-3 ${props.className}`}>
+                <div className="h-8 w-8 border-2 border-foreground rounded-full">
+                    <Image src={props.image} alt="hero" width={100} height={100} quality={100} className="h-full w-full rounded-full object-cover object-top" />
+                </div>
+                <h1>{props.name}</h1>
+            </div>
+        </>
+    )
+}
+
+
