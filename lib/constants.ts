@@ -1,13 +1,28 @@
 import React from "react";
 import AccordionDemo from "@/renders/component/AccordionDemo";
-import ButtonDemo, { ButtonDemo2, ButtonDemo3 } from "@/renders/component/ButtonDemo";
+import ButtonDemo, {
+  ButtonDemo2,
+  ButtonDemo3,
+} from "@/renders/component/ButtonDemo";
 import AlertDialogDemo from "@/renders/component/AlertDialogDemo";
 import CheckboxDemo from "@/renders/component/CheckboxDemo";
-import AvatarDemo, { AvatarGroupCountExample, AvatarGroupExample } from "@/renders/component/AvatarDemo";
+import AvatarDemo, {
+  AvatarGroupCountExample,
+  AvatarGroupExample,
+} from "@/renders/component/AvatarDemo";
 import ImageCardDemo from "@/renders/component/ImageCardDemo";
-import InputDemo, { InputDisabledDemo, InputFileDemo, InputWithLabelDemo, InputWithButtonDemo } from "@/renders/component/InputDemo";
+import InputDemo, {
+  InputDisabledDemo,
+  InputFileDemo,
+  InputWithLabelDemo,
+  InputWithButtonDemo,
+} from "@/renders/component/InputDemo";
 import ProgressDemo from "@/renders/component/ProgressDemo";
-import SelectDemo, { SelectDemo2, SelectDemo3, SelectDemo4 } from "@/renders/component/SelectDemo";
+import SelectDemo, {
+  SelectDemo2,
+  SelectDemo3,
+  SelectDemo4,
+} from "@/renders/component/SelectDemo";
 import SwitchDemo from "@/renders/component/SwitchDemo";
 import TextareaDemo from "@/renders/component/TextareaDemo";
 
@@ -40,8 +55,6 @@ const AccordionDemo = () => {
 }
 
 export default AccordionDemo
-
-
         `,
       },
       installation: {
@@ -410,8 +423,7 @@ import { Button } from "@/registry/new-york/ui/button"
   Avatar: {
     title: "Avatar",
     slug: "avatar",
-    excerpt:
-      "An image element with a fallback for representing the user.",
+    excerpt: "An image element with a fallback for representing the user.",
     sections: {
       preview: {
         render: AvatarDemo,
@@ -609,15 +621,13 @@ export function AvatarGroupCountExample() {
         `,
         },
       },
-
     },
   },
 
   Button: {
     title: "Button",
     slug: "button",
-    excerpt:
-      "Displays a button or a component that looks like a button.",
+    excerpt: "Displays a button or a component that looks like a button.",
     sections: {
       preview: {
         render: ButtonDemo,
@@ -730,7 +740,6 @@ export function ButtonDemo3() {
         `,
         },
       },
-
     },
   },
 
@@ -808,15 +817,13 @@ export { Checkbox }
 `,
         ],
       },
-
     },
   },
 
   ImageCard: {
     title: "Image Card",
     slug: "image-card",
-    excerpt:
-      "A card component optimized for displaying images with captions.",
+    excerpt: "A card component optimized for displaying images with captions.",
     sections: {
       preview: {
         render: ImageCardDemo,
@@ -887,7 +894,6 @@ export default function ImageCard({ imageUrl, caption, className }: Props) {
 `,
         ],
       },
-
     },
   },
 
@@ -1033,15 +1039,13 @@ export  const InputWithButtonDemo = () => {
         `,
         },
       },
-
     },
   },
 
   Progress: {
     title: "Progress",
     slug: "progress",
-    excerpt:
-      "Displays an indicator showing the completion progress of a task.",
+    excerpt: "Displays an indicator showing the completion progress of a task.",
     sections: {
       preview: {
         render: ProgressDemo,
@@ -1131,18 +1135,16 @@ import { Progress } from "@/registry/new-york/ui/progress"
     }, [])
 `,
           `<Progress value={progress} className="w-[60%]" />
-`
+`,
         ],
       },
-
     },
   },
 
   Select: {
     title: "Select",
     slug: "select",
-    excerpt:
-      "Displays a list of options for the user to pick from.",
+    excerpt: "Displays a list of options for the user to pick from.",
     sections: {
       preview: {
         render: SelectDemo,
@@ -1394,7 +1396,7 @@ export {
 } from "@/registry/new-york/ui/select"
 `,
 
-   ` <Select>
+          ` <Select>
       <SelectTrigger className="w-[180px]">
       <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
@@ -1480,7 +1482,7 @@ export  function SelectDemo3() {
         `,
         },
 
-          WithIcon: {
+        WithIcon: {
           render: SelectDemo4,
           code: `
 import {
@@ -1533,15 +1535,13 @@ export  function SelectDemo4() {
         `,
         },
       },
-
     },
   },
 
   Switch: {
     title: "Switch",
     slug: "switch",
-    excerpt:
-      "A toggle switch alternative to a checkbox.",
+    excerpt: "A toggle switch alternative to a checkbox.",
     sections: {
       preview: {
         render: SwitchDemo,
@@ -1620,7 +1620,6 @@ import { Switch } from "@/registry/new-york/ui/switch"
 `,
         ],
       },
-
     },
   },
 
@@ -1690,18 +1689,8 @@ import { Textarea } from "@/registry/new-york/ui/textarea"
 `,
         ],
       },
-
     },
   },
-
-
-
-
-
-
-
-
-
 };
 
 interface ComponentsList {
@@ -1719,6 +1708,3 @@ for (const component in components) {
 }
 
 export { components, componentsList };
-
-
-

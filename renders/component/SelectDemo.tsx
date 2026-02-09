@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Select,
   SelectContent,
@@ -7,20 +7,18 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-
+} from "@/registry/new-york/ui/select";
 
 import {
   ChartBarIcon,
   ChartLineIcon,
   ChartPieIcon,
   CircleDashed,
-} from "lucide-react"
-
+} from "lucide-react";
 
 const SelectDemo = () => {
   return (
-      <Select>
+    <Select>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
@@ -35,15 +33,12 @@ const SelectDemo = () => {
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
-}
+  );
+};
 
-export default SelectDemo
+export default SelectDemo;
 
-
-
-
-export  function SelectDemo2() {
+export function SelectDemo2() {
   return (
     <Select>
       <SelectTrigger className="w-[180px]">
@@ -57,10 +52,10 @@ export  function SelectDemo2() {
         ))}
       </SelectContent>
     </Select>
-  )
+  );
 }
 
-export  function SelectDemo3() {
+export function SelectDemo3() {
   return (
     <Select disabled>
       <SelectTrigger className="w-[180px]">
@@ -76,13 +71,10 @@ export  function SelectDemo3() {
         <SelectItem value="pineapple">Pineapple</SelectItem>
       </SelectContent>
     </Select>
-  )
+  );
 }
 
-
-
-
-export  function SelectDemo4() {
+export function SelectDemo4() {
   return (
     <Select>
       <SelectTrigger className="w-[180px]">
@@ -110,5 +102,5 @@ export  function SelectDemo4() {
         </SelectItem>
       </SelectContent>
     </Select>
-  )
+  );
 }

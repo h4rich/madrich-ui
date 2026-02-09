@@ -27,7 +27,6 @@ const links = [
 ];
 
 const Header = () => {
-
   return (
     <>
       <div className="fixed  shadow-md z-[100] w-full h-18 font-grotesk flex items-center justify-between p-4 bg-background border-b-2 border-foreground">
@@ -45,9 +44,9 @@ const Header = () => {
         </div>
 
         <div className="flex items-center space-x-6 p-[4px]">
-          <Social/>
+          <Social />
 
-          <SearchBar/>
+          <SearchBar />
           <Mode />
         </div>
       </div>
@@ -56,9 +55,6 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
 
 export const Mode = () => {
   const { theme, setTheme } = useTheme();
@@ -75,9 +71,8 @@ export const Mode = () => {
         )}
       </button>
     </>
-  )
-}
-
+  );
+};
 
 export const Social = () => {
   return (
@@ -125,22 +120,22 @@ export const Social = () => {
         </Link>
       </div>
     </>
-  )
-}
+  );
+};
 
-
-
-export const SearchBar = ({className}: {className?: string}) => {
+export const SearchBar = ({ className }: { className?: string }) => {
   return (
     <>
-      <div className={`flex items-center bg-background space-x-2 outline outline-foreground h-[33px] pl-2 shadow-neo  overflow-hidden ${className}`}>
+      <div
+        className={`flex items-center bg-background space-x-2 outline outline-foreground h-[33px] pl-2 shadow-neo  overflow-hidden ${className}`}
+      >
         <Search className="size-[18px]" />
-        <input  
+        <input
           className="outline-none"
           type="text"
           placeholder="Search Components"
         />
       </div>
     </>
-  )
-}
+  );
+};

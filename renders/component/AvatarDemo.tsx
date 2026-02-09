@@ -1,17 +1,22 @@
-import React from 'react'
-import { AvatarGroup,Avatar, AvatarFallback,AvatarGroupCount, AvatarImage } from '@/registry/new-york/ui/avatar'
-
+import React from "react";
+import {
+  AvatarGroup,
+  Avatar,
+  AvatarFallback,
+  AvatarGroupCount,
+  AvatarImage,
+} from "@/registry/new-york/ui/avatar";
 
 const AvatarDemo = () => {
   return (
-   <>
-   <Avatar className='outline-foreground'>
-  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-  <AvatarFallback>CN</AvatarFallback>
-</Avatar>
-   </>
-  )
-}
+    <>
+      <Avatar className="outline-foreground">
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+    </>
+  );
+};
 
 export function AvatarGroupExample() {
   return (
@@ -32,10 +37,8 @@ export function AvatarGroupExample() {
         <AvatarFallback>ER</AvatarFallback>
       </Avatar>
     </AvatarGroup>
-  )
+  );
 }
-
-
 
 export function AvatarGroupCountExample() {
   return (
@@ -55,24 +58,22 @@ export function AvatarGroupCountExample() {
         />
         <AvatarFallback>ER</AvatarFallback>
       </Avatar>
-       <Avatar>
+      <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-       <Avatar>
+      <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      
-       <Avatar>
+
+      <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       <AvatarGroupCount>+7</AvatarGroupCount>
     </AvatarGroup>
-  )
+  );
 }
 
-
-
-export default AvatarDemo
+export default AvatarDemo;

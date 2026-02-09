@@ -1,9 +1,8 @@
-"use client"
+"use client";
 
 import React from "react";
 import { useState } from "react";
 import RenderCode from "./RenderCode";
-
 
 interface CLI {
   pnpm: string;
@@ -37,7 +36,6 @@ const Installation = ({ cli, code }: { cli: CLI; code: string }) => {
           </button>
         </div>
 
-
         {activeMain === "cli" && (
           <div className="w-full">
             <div className="grid grid-cols-4 border-b-2 border-foreground w-full">
@@ -53,14 +51,11 @@ const Installation = ({ cli, code }: { cli: CLI; code: string }) => {
               ))}
             </div>
 
-
             <RenderCode data={cli[activeCli]} />
           </div>
         )}
 
-        {activeMain === "manual" && (
-          <RenderCode data={code} />
-        )}
+        {activeMain === "manual" && <RenderCode data={code} />}
       </div>
     </div>
   );

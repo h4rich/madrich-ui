@@ -20,13 +20,16 @@ const Page = ({ params }: PageProps) => {
   const [comp, setComp] = useState<ComponentDetails | null>(null);
 
   useEffect(() => {
-    const slugString = slug.join("/")
+    const slugString = slug.join("/");
     // alert-dialog to AlertDialog
     const slugStringToComponentName = () => {
-      return slugString.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("")
-    }
+      return slugString
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join("");
+    };
 
-    const res = components[slugStringToComponentName()]
+    const res = components[slugStringToComponentName()];
     setComp(res ?? null);
   }, [slug]);
 

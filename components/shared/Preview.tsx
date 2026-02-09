@@ -1,15 +1,20 @@
-"use client"
+"use client";
 
 import React, { ComponentType } from "react";
 import { useState } from "react";
 import RenderCode from "./RenderCode";
 
-const Preview = ({ render: RenderComponent, code }: { render: ComponentType; code: string }) => {
+const Preview = ({
+  render: RenderComponent,
+  code,
+}: {
+  render: ComponentType;
+  code: string;
+}) => {
   const [activeTab, setActiveTab] = useState<"preview" | "code">("preview");
 
   return (
     <div className="w-full shadow-neo font-grotesk max-w-4xl h-[350px] border-2 border-foreground bg-background flex flex-col">
-
       <div className="flex border-b-2 border-foreground shrink-0">
         <button
           onClick={() => setActiveTab("preview")}
@@ -30,22 +35,18 @@ const Preview = ({ render: RenderComponent, code }: { render: ComponentType; cod
         </button>
       </div>
 
-
-      <div className={`flex-1 overflow-y-auto scrollbar-hide bg-grid flex relative ${activeTab === 'preview' ? 'items-center justify-center' : ''}`}>
+      <div
+        className={`flex-1 overflow-y-auto scrollbar-hide bg-grid flex relative ${activeTab === "preview" ? "items-center justify-center" : ""}`}
+      >
         {activeTab === "preview" && (
           <div className="w-full flex items-center justify-center h-full">
             <RenderComponent />
           </div>
-        )}  
-
-        {activeTab === "code" && (
-          <RenderCode data={code} />
         )}
 
+        {activeTab === "code" && <RenderCode data={code} />}
       </div>
     </div>
-
-
   );
 };
 

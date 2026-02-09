@@ -1,12 +1,11 @@
-import { Checkbox } from '@/registry/new-york/ui/checkbox'
-
+import { Checkbox } from "@/registry/new-york/ui/checkbox";
 
 const CheckboxDemo = () => {
-    return (
-        <>
-        <Checkbox />
-        </>
-    )
-}
+  return (
+    <>
+      <Checkbox />
+    </>
+  );
+};
 
-export default CheckboxDemo
+export default CheckboxDemo;

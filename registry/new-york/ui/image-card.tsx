@@ -1,10 +1,10 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 type Props = {
-  imageUrl: string
-  caption: string
-  className?: string
-}
+  imageUrl: string;
+  caption: string;
+  className?: string;
+};
 
 export default function ImageCard({ imageUrl, caption, className }: Props) {
   return (
@@ -14,10 +14,14 @@ export default function ImageCard({ imageUrl, caption, className }: Props) {
         className,
       )}
     >
-      <img className="w-full aspect-4/3 object-cover object-top " src={imageUrl} alt="image" />
+      <img
+        className="w-full aspect-4/3 object-cover object-top "
+        src={imageUrl}
+        alt="image"
+      />
       <figcaption className="border-t-2 text-main-foreground border-foreground p-4">
         {caption}
       </figcaption>
     </figure>
-  )
+  );
 }
