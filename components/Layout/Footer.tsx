@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="flex flex-col justify-between gap-10">
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <h1 className="text-3xl bg-background font-bold cursor-pointer ring ring-foreground  p-1 px-2 shadow-neo">
+              <h1 className="text-xl md:text-2xl bg-background font-black cursor-pointer border-[3px] border-foreground p-1.5 px-3 shadow-neo hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 uppercase tracking-wide">
                 Madrich UI
               </h1>
             </Link>
