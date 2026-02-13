@@ -1,0 +1,53 @@
+"use client";
+
+import React, { ComponentType } from "react";
+import { useState } from "react";
+import RenderCode from "./RenderCode";
+
+const Preview = ({
+  render: RenderComponent,
+  code,
+}: {
+  render: ComponentType;
+  code: string;
+}) => {
+  const [activeTab, setActiveTab] = useState<"preview" | "code">("preview");
+
+  return (
+    <div className="w-full shadow-neo font-grotesk max-w-4xl min-h-[250px] sm:min-h-[300px] md:h-[350px] border-2 border-foreground bg-background flex flex-col">
+      <div className="flex border-b-2 border-foreground shrink-0">
+        <button
+          onClick={() => setActiveTab("preview")}
+          className={`w-1/2 py-2 sm:py-3 text-sm sm:text-base font-bold text-center border-r-2 border-foreground
+      ${activeTab === "preview" ? "bg-hero text-foreground" : "bg-card-surface text-foreground"}
+      `}
+        >
+          Preview
+        </button>
+
+        <button
+          onClick={() => setActiveTab("code")}
+          className={`w-1/2 py-2 sm:py-3 text-sm sm:text-base font-bold text-center
+      ${activeTab === "code" ? "bg-hero text-foreground" : "bg-card-surface text-foreground"}
+      `}
+        >
+          Code
+        </button>
+      </div>
+
+      <div
+        className={`flex-1 overflow-y-auto scrollbar-hide bg-grid flex relative ${activeTab === "preview" ? "items-center justify-center" : ""}`}
+      >
+        {activeTab === "preview" && (
+          <div className="w-full flex items-center justify-center h-full p-4">
+            <RenderComponent />
+          </div>
+        )}
+
+        {activeTab === "code" && <RenderCode data={code} />}
+      </div>
+    </div>
+  );
+};
+
+export default Preview;
