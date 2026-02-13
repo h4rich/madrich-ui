@@ -19,7 +19,7 @@ const Preview = ({
         <button
           onClick={() => setActiveTab("preview")}
           className={`w-1/2 py-2 sm:py-3 text-sm sm:text-base font-bold text-center border-r-2 border-foreground
-      ${activeTab === "preview" ? "bg-hero text-black" : "bg-white text-black"}
+      ${activeTab === "preview" ? "bg-hero text-foreground" : "bg-card-surface text-foreground"}
       `}
         >
           Preview
@@ -28,7 +28,7 @@ const Preview = ({
         <button
           onClick={() => setActiveTab("code")}
           className={`w-1/2 py-2 sm:py-3 text-sm sm:text-base font-bold text-center
-      ${activeTab === "code" ? "bg-hero text-black" : "bg-white text-black"}
+      ${activeTab === "code" ? "bg-hero text-foreground" : "bg-card-surface text-foreground"}
       `}
         >
           Code

@@ -9,7 +9,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      <main className="flex h-screen w-full overflow-hidden bg-[#F4F4F0]">
+      <main className="flex h-screen w-full overflow-hidden bg-primary-bg">
         {/* Mobile Overlay */}
         {sidebarOpen && (
           <div

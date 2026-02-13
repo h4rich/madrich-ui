@@ -23,7 +23,7 @@ const features = [
     description:
       "Built on accessible primitives with full ownership—no locked-in styles.",
     icon: Layers,
-    color: "bg-white",
+    color: "bg-card-surface",
   },
   {
     title: "Neo-Brutalism",
@@ -37,14 +37,14 @@ const features = [
     description:
       "Clean markup and predictable structure you can drop straight into production.",
     icon: Code2,
-    color: "bg-[#E9DCFE]",
+    color: "bg-[#E9DCFE] dark:bg-card-surface",
     className: "md:col-span-2",
   },
   {
     title: "Responsive",
     description: "Layouts that adapt perfectly to any device size.",
     icon: Layout,
-    color: "bg-white",
+    color: "bg-card-surface",
   },
   {
     title: "Typography",
@@ -69,7 +69,7 @@ function Features() {
       <div
         className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(#000 1.5px, transparent 1.5px)",
+          backgroundImage: "radial-gradient(currentColor 1.5px, transparent 1.5px)",
           backgroundSize: "24px 24px",
         }}
       ></div>
@@ -78,12 +78,12 @@ function Features() {
         <div className="mb-16 text-center">
           <h2 className="text-5xl md:text-7xl font-black uppercase text-foreground mb-6">
             Why This{" "}
-            <span className="bg-[#FFC900] px-2 shadow-[6px_6px_0px_0px_#000] border-2 border-foreground inline-block -rotate-2">
+            <span className="bg-[#FFC900] px-2 shadow-neo-md border-2 border-foreground inline-block -rotate-2">
               Library
             </span>{" "}
             Exists
           </h2>
-          <p className="text-xl font-bold max-w-2xl mx-auto border-2 border-foreground p-4 bg-white shadow-[4px_4px_0px_0px_#000]">
+          <p className="text-xl font-bold max-w-2xl mx-auto border-2 border-foreground p-4 bg-card-surface shadow-neo-4">
             We stripped away the polish to give you raw, unopinionated, and bold
             building blocks.
           </p>
@@ -94,14 +94,14 @@ function Features() {
             <div
               key={index}
               className={`
-                                group relative border-3 border-foreground p-8 shadow-[8px_8px_0px_0px_#000] 
-                                hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] 
+                                group relative border-3 border-foreground p-8 shadow-neo-lg 
+                                hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-4 
                                 transition-all duration-200 flex flex-col justify-between
                                 ${feature.color} ${feature.className || ""}
                             `}
             >
               <div className="mb-6">
-                <div className="bg-white w-14 h-14 border-2 border-foreground flex items-center justify-center shadow-[4px_4px_0px_0px_#000] mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-card-surface w-14 h-14 border-2 border-foreground flex items-center justify-center shadow-neo-4 mb-4 group-hover:scale-110 transition-transform">
                   <feature.icon className="h-8 w-8 stroke-[2.5]" />
                 </div>
                 <h3 className="text-2xl font-black uppercase mb-3">

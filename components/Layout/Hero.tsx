@@ -41,7 +41,7 @@ const Hero = () => {
         <div className="flex flex-col gap-3 pl-20 justify-between w-[60%]">
           <div className="flex flex-col gap-4 mt-40">
             <h1 className="text-6xl font-bold leading-[1.4] tracking-wide">
-              <span className="border-4 border-black bg-hero p-2 px-4 shadow-[8px_8px_0px_0px_#000] inline-block transition-all duration-200 hover:shadow-[16px_16px_0px_0px_#000] hover:-translate-y-2 hover:-translate-x-2 hover:-rotate-2 hover:bg-[#FFC900] cursor-pointer active:translate-x-0 active:translate-y-0 active:shadow-none active:rotate-0 animate-[neoBrutalBounce_0.6s_ease-out_0.3s_1]">
+              <span className="border-4 border-foreground bg-hero p-2 px-4 shadow-[8px_8px_0px_0px_var(--foreground)] inline-block transition-all duration-200 hover:shadow-[16px_16px_0px_0px_var(--foreground)] hover:-translate-y-2 hover:-translate-x-2 hover:-rotate-2 hover:bg-[#FFC900] cursor-pointer active:translate-x-0 active:translate-y-0 active:shadow-none active:rotate-0 animate-[neoBrutalBounce_0.6s_ease-out_0.3s_1]">
                 Neo-Brutal
               </span>{" "}
               UI for <br /> Bold Builders.
@@ -70,10 +70,10 @@ const Hero = () => {
               <InputWithLabelDemo />
               <div className="w-[300px] h-20 flex items-center justify-between p-6 border-2 bg-[#E9DCFE] rounded-sm rounded-b-none border-b-0 border-hero cursor-pointer">
                 <div className="flex gap-2 items-center">
-                  <IoIosAlert className="size-6" />
-                  <h2 className="font-semibold text-lg">Information</h2>
+                  <IoIosAlert className="size-6 text-black" />
+                  <h2 className="font-semibold text-black text-lg">Information</h2>
                 </div>
-                <X />
+                <X className="size-6 text-black" />
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ const Hero = () => {
                 Badge
               </button>
             </div>
-            <div className="flex items-center justify-center gap-4 mt-15 h-20 w-[400px] border-2 border-foreground border-r-0 rounded-sm shadow-neo rounded-br-none bg-[#E7E5E4] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+            <div className="flex items-center justify-center gap-4 mt-15 h-20 w-[400px] border-2 border-foreground border-r-0 rounded-sm shadow-neo rounded-br-none bg-card-alt hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
               <Link href="#" className="flex items-center gap-2 underline underline-offset-2">
                 <Link2 />
                 Copy link
@@ -194,7 +194,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <h2>John Snow</h2>
-                  <p className="text-sm text-neutral-500">Sent you an invite to connect</p>
+                  <p className="text-sm text-muted-neo">Sent you an invite to connect</p>
                 </div>
               </div>
             </div>
@@ -216,8 +216,8 @@ const Hero = () => {
               />
 
               {/* Stats Card */}
-              <div className="w-[300px] flex flex-col justify-center items-start pl-5 gap-2 h-30 border-2 border-foreground border-r-0 bg-background hover:bg-hero/10 transition-all duration-150">
-                <h2 className="text-md text-neutral-800">Total Income</h2>
+              <div className="w-[300px] flex flex-col justify-center items-start pl-5 gap-2 h-30 border-2 border-foreground border-r-0 border-b-0  bg-background hover:bg-hero/10 transition-all duration-150">
+                <h2 className="text-md text-foreground/70">Total Income</h2>
                 <h2 className="text-4xl font-semibold">$129,000.00</h2>
               </div>
             </div>

@@ -211,6 +211,18 @@ export default Header;
 
 export const Mode = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="bg-hero border-[3px] border-foreground p-2 shadow-neo size-[38px] md:size-[42px]" />
+    );
+  }
+
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

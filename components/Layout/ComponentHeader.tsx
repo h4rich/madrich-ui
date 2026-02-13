@@ -30,7 +30,7 @@ const ComponentHeader = ({
 
   return (
     <>
-      <div className="w-full h-16 sm:h-18 border-y-2 flex items-center border-y-black px-3 sm:px-4 lg:px-6">
+      <div className="w-full h-20 border-y-3 flex items-center border-y-foreground px-3 sm:px-4 lg:px-6">
         <div className="w-full max-w-[95rem] mx-auto flex justify-between items-center gap-2 sm:gap-4">
           <div className="flex items-center gap-2 sm:gap-4">
             {/* Mobile menu button */}

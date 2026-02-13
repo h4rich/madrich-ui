@@ -6,7 +6,7 @@ export const CreatorCard = () => {
   return (
    <div className="flex relative">
               {/* Avatar 1 */}
-              <div className="group relative w-30 h-30 border-3 border-background rounded-full hover:z-20 hover:scale-[1.05] transition-all duration-300 bg-white cursor-pointer">
+              <div className="group relative w-30 h-30 border-3 border-[#F4F4F0] rounded-full hover:z-20 hover:scale-[1.05] transition-all duration-300 bg-white cursor-pointer">
                 <Image
                   src="/image/harish.jpeg"
                   alt="hero"
@@ -28,13 +28,13 @@ export const CreatorCard = () => {
               </div>
 
               {/* Avatar 2 */}
-              <div className="group absolute left-25 w-30 h-30 border-3 border-background bg-white hover:scale-[1.05] transition-all duration-300 rounded-full z-10 cursor-pointer">
+              <div className="group absolute left-25 w-30 h-30 border-3 border-[#F4F4F0] bg-white hover:scale-[1.05] transition-all duration-300 rounded-full z-10 cursor-pointer">
                 <Image
                   src="/image/manish.png"
                   alt="hero"
                   width={250}
                   height={250}
-                  className="h-full w-full rounded-full object-cover object-top"
+                  className="h-full w-full rounded-full object-cover object-center"
                 />
                 {/* Hover Card */}
                 <div className="absolute -top-17 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-30">

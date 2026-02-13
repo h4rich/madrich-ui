@@ -86,7 +86,7 @@ const SearchCommand = ({ open, onClose }: SearchCommandProps) => {
 
       {/* Dialog */}
       <div className="fixed inset-0 z-[201] flex items-start justify-center pt-[20vh]">
-        <div className="w-[90vw] max-w-[520px] bg-background border-3 border-foreground shadow-[8px_8px_0px_0px_#000] animate-in fade-in-0 zoom-in-95 slide-in-from-top-4 duration-200">
+        <div className="w-[90vw] max-w-[520px] bg-background border-3 border-foreground shadow-neo-lg animate-in fade-in-0 zoom-in-95 slide-in-from-top-4 duration-200">
           {/* Search Input */}
           <div className="flex items-center gap-3 px-4 border-b-3 border-foreground">
             <Search className="size-5 shrink-0 text-foreground" strokeWidth={2.5} />
@@ -120,7 +120,7 @@ const SearchCommand = ({ open, onClose }: SearchCommandProps) => {
                   className={cn(
                     "w-full flex items-center gap-3 px-4 py-3 text-left transition-all duration-100 font-bold text-base capitalize",
                     selectedIndex === index
-                      ? "bg-hero border-2 border-foreground shadow-[3px_3px_0px_0px_#000]"
+                      ? "bg-hero border-2 border-foreground shadow-neo-sm"
                       : "border-2 border-transparent hover:bg-hero/20"
                   )}
                 >
