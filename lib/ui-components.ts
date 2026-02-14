@@ -1,4 +1,3 @@
-import React from "react";
 import AccordionDemo from "@/renders/component/AccordionDemo";
 import ButtonDemo, {
   ButtonDemo2,
@@ -1594,9 +1593,6 @@ export {
   SelectScrollUpButton,
   SelectScrollDownButton,
 };
-
-
-
         `,
       },
       usage: {
@@ -1993,10 +1989,6 @@ export { TooltipCard };
       },
     },
   },
-
-  
-
-  
 };
 
 interface ComponentsList {
