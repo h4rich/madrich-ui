@@ -65,8 +65,8 @@ function Progress({ className, value = 0, onChange, ...props }: ProgressProps) {
         {/* Thumb with percentage inside */}
         <div
           className={cn(
-            "absolute top-1/2 flex items-center justify-center w-8 h-8 rounded-full border-2 border-foreground bg-background cursor-grab select-none",
-            dragging ? "cursor-grabbing scale-110" : "transition-all duration-150",
+            "absolute top-1/2 flex items-center justify-center w-8 h-8 rounded-full border-2 border-foreground bg-background cursor-grab select-none transition-transform duration-100",
+            dragging && "cursor-grabbing scale-110",
           )}
           style={{
             left: `${value}%`,
