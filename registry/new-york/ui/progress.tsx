@@ -55,15 +55,18 @@ function Progress({ className, value = 0, onChange, ...props }: ProgressProps) {
         {/* Filled indicator */}
         <div
           data-slot="progress-indicator"
-          className="h-full bg-hero rounded-full transition-[width]"
+          className={cn(
+            "h-full bg-hero rounded-full",
+            !dragging && "transition-[width] duration-150"
+          )}
           style={{ width: `${value}%` }}
         />
 
         {/* Thumb with percentage inside */}
         <div
           className={cn(
-            "absolute top-1/2 flex items-center justify-center w-8 h-8  rounded-full border-2 border-foreground bg-background cursor-grab select-none transition-all",
-            dragging && "cursor-grabbing scale-110",
+            "absolute top-1/2 flex items-center justify-center w-8 h-8 rounded-full border-2 border-foreground bg-background cursor-grab select-none",
+            dragging ? "cursor-grabbing scale-110" : "transition-all duration-150",
           )}
           style={{
             left: `${value}%`,
