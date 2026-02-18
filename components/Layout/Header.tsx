@@ -14,18 +14,6 @@ const links = [
     name: "Components",
     href: "/components/Accordion",
   },
-  {
-    name: "Docs",
-    href: "#",
-  },
-  {
-    name: "Templates",
-    href: "#",
-  },
-  {
-    name: "Showcase",
-    href: "#",
-  },
 ];
 
 const Header = () => {
@@ -68,27 +56,27 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed z-[100] w-full h-18 md:h-[85px] font-grotesk flex items-center justify-between px-4 md:px-8 bg-background border-b-[3px] border-foreground shadow-[0_4px_0_0_hsl(var(--foreground))]">
-        <div className="flex items-center">
+      <header className="fixed z-[100] w-full h-18 md:h-[85px] font-grotesk flex items-center justify-between px-4 md:px-8 bg-background border-b-[3px] border-border-strong shadow-[0_4px_0_0_hsl(var(--foreground))]">
+        <div className="flex items-center gap-4">
           <Link href="/">
-            <h1 className="text-md  md:text-lg lg:text-xl bg-background font-bold  cursor-pointer border-[3px] border-foreground p-1.5 px-3 shadow-neo hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150  tracking-wide">
+            <h1 className="text-md md:text-lg lg:text-xl bg-background font-bold  cursor-pointer border-[3px] border-border-strong p-1.5 px-3 shadow-neo hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150  tracking-wide">
               Madrich UI
             </h1>
           </Link>
-        </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-2 lg:space-x-3">
-          {links.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="relative font-bold text-base lg:text-lg text-foreground px-4 py-1 border-[3px] border-transparent hover:border-foreground hover:bg-hero transition-all duration-150 uppercase tracking-wide"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-2 lg:space-x-3">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="relative font-bold text-base lg:text-lg text-foreground px-4 py-1 hover:underline transition-all duration-150 uppercase tracking-wide"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
         {/* Desktop Right Section */}
         <div className="hidden md:flex items-center space-x-4 lg:space-x-4">
@@ -104,7 +92,7 @@ const Header = () => {
         <div className="flex md:hidden items-center space-x-3">
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="cursor-pointer border-[3px] border-foreground p-2 text-foreground bg-background shadow-neo size-[38px] flex items-center justify-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
+            className="cursor-pointer border-[3px] border-border-strong p-2 text-foreground bg-background shadow-neo size-[38px] flex items-center justify-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
             aria-label="Search"
           >
             <Search size={25} strokeWidth={3.5} />
@@ -113,10 +101,10 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={cn(
-              "relative cursor-pointer border-[3px] border-foreground p-2 text-foreground size-[44px] flex items-center justify-center transition-all duration-150",
+              "relative cursor-pointer border-[3px] border-border-strong p-2 text-foreground size-[44px] flex items-center justify-center transition-all duration-150",
               isMenuOpen
                 ? "bg-[#FF6B6B] shadow-neo"
-                : "bg-[#FFE566] shadow-neo",
+                : "bg-brand-yellow shadow-neo",
             )}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
@@ -160,7 +148,7 @@ const Header = () => {
       {/* Mobile Navigation Drawer */}
       <nav
         className={cn(
-          "fixed top-16 right-0 w-[300px] sm:w-[340px] h-[calc(100vh-64px)] bg-background border-l-[3px] border-foreground z-[95] md:hidden transition-transform duration-300 ease-out overflow-y-auto",
+          "fixed top-16 right-0 w-[300px] sm:w-[340px] h-[calc(100vh-64px)] bg-background border-l-[3px] border-border-strong z-[95] md:hidden transition-transform duration-300 ease-out overflow-y-auto",
           isMenuOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
@@ -172,7 +160,7 @@ const Header = () => {
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
                 className={cn(
-                  "block py-3 px-5 bg-hero rounded-sm font-black text-lg text-foreground border-[3px] border-foreground shadow-neo hover:shadow-none  hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 uppercase tracking-wide",
+                  "block py-3 px-5 bg-hero rounded-sm font-black text-lg text-foreground border-[3px] border-border-strong shadow-neo hover:shadow-none  hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 uppercase tracking-wide",
                   "transform",
                   isMenuOpen
                     ? "translate-x-0 opacity-100"
@@ -187,7 +175,7 @@ const Header = () => {
             ))}
           </div>
 
-          <div className="pt-6 border-t-[3px] border-foreground mt-4">
+          <div className="pt-6 border-t-[3px] border-border-strong mt-4">
             <p className="text-sm font-black text-foreground uppercase tracking-widest mb-4">
               Follow us
             </p>
@@ -221,14 +209,14 @@ export const Mode = () => {
 
   if (!mounted) {
     return (
-      <div className="bg-hero border-[3px] border-foreground p-2 shadow-neo size-[38px] md:size-[42px]" />
+      <div className="bg-hero border-[3px] border-border-strong p-2 shadow-neo size-[38px] md:size-[42px]" />
     );
   }
 
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="transition-all relative cursor-pointer bg-hero border-[3px] border-foreground p-2 text-foreground shadow-neo size-[38px] md:size-[42px] flex items-center justify-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] duration-150"
+      className="transition-all relative cursor-pointer bg-hero border-[3px] border-border-strong p-2 text-foreground shadow-neo size-[38px] md:size-[42px] flex items-center justify-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] duration-150"
       aria-label={
         theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
       }
@@ -265,7 +253,7 @@ export const Social = () => {
       <Link
         href="https://x.com/h4rich_"
         target="_blank"
-        className="cursor-pointer border-[3px] bg-background border-foreground p-2 shadow-neo size-[38px] md:size-[42px] grid place-items-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
+        className="cursor-pointer border-[3px] bg-background border-border-strong p-2 shadow-neo size-[38px] md:size-[42px] grid place-items-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
         aria-label="Twitter"
       >
         <svg
@@ -286,7 +274,7 @@ export const Social = () => {
       <Link
         href="https://github.com/h4rich"
         target="_blank"
-        className="cursor-pointer bg-background border-[3px] border-foreground p-2 shadow-neo size-[38px] md:size-[42px] grid place-items-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
+        className="cursor-pointer bg-background border-[3px] border-border-strong p-2 shadow-neo size-[38px] md:size-[42px] grid place-items-center hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
         aria-label="GitHub"
       >
         <svg
@@ -321,7 +309,7 @@ export const SearchBar = ({
     <div
       onClick={onClick}
       className={cn(
-        "flex items-center justify-between bg-background space-x-2 border-[3px] border-foreground h-[38px] md:h-[42px] px-3 shadow-neo overflow-hidden hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150 cursor-pointer",
+        "flex items-center justify-between bg-background space-x-2 border-[3px] border-border-strong h-[38px] md:h-[42px] px-3 shadow-neo overflow-hidden hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150 cursor-pointer",
         className,
       )}
     >
@@ -333,8 +321,8 @@ export const SearchBar = ({
       <span className="w-full text-foreground/60 font-medium select-none">
         Search...
       </span>
-      <kbd className="hidden xl:flex items-center gap-1 px-2 py-0.5 text-xs font-bold bg-foreground text-background border border-foreground">
-        ⌘ K
+      <kbd className="hidden xl:grid place-items-center px-2 py-0.5 text-xs font-bold bg-foreground text-background border border-foreground">
+        ⌘<kbd>K</kbd>
       </kbd>
     </div>
   );

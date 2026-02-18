@@ -49,6 +49,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-border-strong: var(--border-strong);
 }
 
 :root {
@@ -91,6 +93,8 @@
   --card-alt: #e7e5e4;
   --muted-neo: #6b7280;
   --neo-shadow-color: 0 0 0;
+  --brand-yellow: #ffe566;
+  --border-strong: var(--foreground);
 }
 
 .dark {
@@ -131,6 +135,8 @@
   --card-alt: #1c1c1c;
   --muted-neo: #a1a1aa;
   --neo-shadow-color: 174 122 255;
+  --brand-yellow: #854d0e; /* Darker yellow for better contrast with white text */
+  --border-strong: oklch(0.7 0 0);
 }
 
 @layer base {

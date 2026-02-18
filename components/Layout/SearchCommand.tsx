@@ -95,9 +95,9 @@ const SearchCommand = ({ open, onClose }: SearchCommandProps) => {
 
       {/* Dialog */}
       <div className="fixed inset-0 z-[201] flex items-start justify-center pt-[20vh]">
-        <div className="w-[90vw] max-w-[520px] bg-background border-3 border-foreground shadow-neo-lg animate-in fade-in-0 zoom-in-95 slide-in-from-top-4 duration-200">
+        <div className="w-[90vw] max-w-[520px] bg-background border-3 border-border-strong shadow-neo-lg animate-in fade-in-0 zoom-in-95 slide-in-from-top-4 duration-200">
           {/* Search Input */}
-          <div className="flex items-center gap-3 px-4 border-b-3 border-foreground">
+          <div className="flex items-center gap-3 px-4 border-b-3 border-border-strong">
             <Search
               className="size-5 shrink-0 text-foreground"
               strokeWidth={2.5}
@@ -135,11 +135,11 @@ const SearchCommand = ({ open, onClose }: SearchCommandProps) => {
                   className={cn(
                     "w-full flex items-center gap-3 px-4 py-3 text-left transition-all duration-100 font-bold text-base capitalize",
                     selectedIndex === index
-                      ? "bg-hero border-2 border-foreground shadow-neo-sm"
+                      ? "bg-hero border-2 border-border-strong shadow-neo-sm"
                       : "border-2 border-transparent hover:bg-hero/20",
                   )}
                 >
-                  <div className="size-8 bg-foreground/10 border-2 border-foreground flex items-center justify-center text-sm font-black uppercase">
+                  <div className="size-8 bg-foreground/10 border-2 border-border-strong flex items-center justify-center text-sm font-black uppercase">
                     {component.title.charAt(0)}
                   </div>
                   {component.title}
@@ -149,9 +149,9 @@ const SearchCommand = ({ open, onClose }: SearchCommandProps) => {
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between px-4 py-2 border-t-3 border-foreground bg-foreground/5">
+          <div className="flex items-center justify-between px-4 py-2 border-t-3 border-border-strong bg-foreground/5">
             <div className="flex gap-2">
-              <kbd className="px-2 py-0.5 text-xs font-black bg-foreground text-background border border-foreground">
+              <kbd className="px-2 py-0.5 text-xs font-black bg-foreground text-background border border-border-strong">
                 ↑↓
               </kbd>
               <span className="text-xs font-bold text-foreground/60">
@@ -159,13 +159,13 @@ const SearchCommand = ({ open, onClose }: SearchCommandProps) => {
               </span>
             </div>
             <div className="flex gap-2">
-              <kbd className="px-2 py-0.5 text-xs font-black bg-foreground text-background border border-foreground">
+              <kbd className="px-2 py-0.5 text-xs font-black bg-foreground text-background border border-border-strong">
                 ↵
               </kbd>
               <span className="text-xs font-bold text-foreground/60">Open</span>
             </div>
             <div className="flex gap-2">
-              <kbd className="px-2 py-0.5 text-xs font-black bg-foreground text-background border border-foreground">
+              <kbd className="px-2 py-0.5 text-xs font-black bg-foreground text-background border border-border-strong">
                 Esc
               </kbd>
               <span className="text-xs font-bold text-foreground/60">
