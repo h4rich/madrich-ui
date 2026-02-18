@@ -83,8 +83,9 @@ const Hero = () => {
 
           {/* Bottom Left Avatars */}
           <div className="flex flex-col md:flex-row justify-between items-center mr-4 lg:mr-16 gap-4 md:gap-0">
-            <CreatorCard />
-
+            <div className="">
+              <CreatorCard />
+            </div>
             <div className="hidden lg:flex flex-col gap-8">
               <AvatarGroupCountExample />
               <InputWithLabelDemo />
