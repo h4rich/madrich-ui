@@ -136,7 +136,7 @@
   --muted-neo: #a1a1aa;
   --neo-shadow-color: 174 122 255;
   --brand-yellow: #854d0e; /* Darker yellow for better contrast with white text */
-  --border-strong: oklch(0.7 0 0);
+  --border-strong: oklch(1 0 0);
 }
 
 @layer base {
