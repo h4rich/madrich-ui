@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 
 const LeftSidebar = ({ onClose }: { onClose?: () => void }) => {
   return (
-    <div className="font-grotesk w-[280px] sm:w-[300px] h-full p-4 overflow-y-auto scrollbar-hide bg-foreground text-background">
+    <div className="font-grotesk w-[280px] sm:w-[300px] h-full p-4 overflow-y-auto scrollbar-hide dark:bg-background dark:text-foreground bg-foreground text-background">
       <div className="flex flex-col">
         <div className="flex items-center justify-between mb-2">
           <Link href="/" className="text-2xl sm:text-3xl font-bold">
