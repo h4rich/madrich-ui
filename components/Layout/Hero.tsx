@@ -61,7 +61,7 @@ const Hero = () => {
         <div className="flex flex-col mt-24 mb-16 lg:mb-0 lg:mt-0 mx-4 lg:mx-12 justify-between w-full lg:w-[50%] ">
           <div className="flex flex-col gap-4 mt-0 lg:mt-40">
             <h1 className="text-4xl md:text-6xl font-bold leading-[1.4] tracking-wide">
-              <span className="border-4 border-foreground bg-hero p-2 px-4 shadow-[8px_8px_0px_0px_var(--foreground)] inline-block transition-all duration-200 hover:shadow-[16px_16px_0px_0px_var(--foreground)] hover:-translate-y-2 hover:-translate-x-2 hover:-rotate-2 hover:bg-[#FFC900] cursor-pointer active:translate-x-0 active:translate-y-0 active:shadow-none active:rotate-0 animate-[neoBrutalBounce_0.6s_ease-out_0.3s_1]">
+              <span className="border-4 border-border-strong bg-hero p-2 px-4 shadow-[8px_8px_0px_0px_var(--foreground)] inline-block transition-all duration-200 hover:shadow-[16px_16px_0px_0px_var(--foreground)] hover:-translate-y-2 hover:-translate-x-2 hover:-rotate-2 hover:bg-[#FFC900] cursor-pointer active:translate-x-0 active:translate-y-0 active:shadow-none active:rotate-0 animate-[neoBrutalBounce_0.6s_ease-out_0.3s_1]">
                 Neo-Brutal
               </span>{" "}
               UI for <br /> Bold Builders.
@@ -75,7 +75,7 @@ const Hero = () => {
               out.
             </p>
             <div className="mt-5">
-              <button className="border-2 border-foreground p-2 px-4 font-semibold bg-hero shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+              <button className="border-2 border-border-strong p-2 px-4 font-semibold bg-hero shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
                 <Link href="/components/accordion">Browse Components</Link>
               </button>
             </div>
@@ -107,17 +107,17 @@ const Hero = () => {
           {/* Badges Row */}
           <div className="flex gap-5 justify-between">
             <div className="flex mt-24 h-10 gap-5">
-              <button className="border border-foreground p-1 px-5 font-semibold bg-[#FFC900] rounded-sm shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+              <button className="border border-border-strong p-1 px-5 font-semibold bg-[#FFC900] rounded-sm shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
                 Badge
               </button>
-              <button className="border border-foreground p-1 px-5 font-semibold bg-[#11A365] rounded-lg shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+              <button className="border border-border-strong p-1 px-5 font-semibold bg-[#11A365] rounded-lg shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
                 Badge
               </button>
-              <button className="border border-foreground p-1 px-5 font-semibold bg-[#FF7051] rounded-full shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+              <button className="border border-border-strong p-1 px-5 font-semibold bg-[#FF7051] rounded-full shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
                 Badge
               </button>
             </div>
-            <div className="flex items-center justify-center gap-4 mt-15 h-20 w-[400px] border-2 border-foreground border-r-0 rounded-sm shadow-neo rounded-br-none bg-card-alt hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+            <div className="flex items-center justify-center gap-4 mt-15 h-20 w-[400px] border-2 border-border-strong border-r-0 rounded-sm shadow-neo rounded-br-none bg-card-alt hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
               <Link
                 href="#"
                 className="flex items-center gap-2 underline underline-offset-2"
@@ -156,7 +156,7 @@ const Hero = () => {
               <TooltipCardDemo />
 
               {/* Search Inputs */}
-              <div className="flex gap-4 h-10 w-[400px] border-2 bg-background p-2 border-foreground shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 focus-within:shadow-none focus-within:translate-x-[5px] focus-within:translate-y-[5px]">
+              <div className="flex gap-4 h-10 w-[400px] border-2 bg-background p-2 border-border-strong shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 focus-within:shadow-none focus-within:translate-x-[5px] focus-within:translate-y-[5px]">
                 <Search className="ml-2 size-[18px]" />
                 <input
                   className="outline-none bg-transparent"
@@ -165,7 +165,7 @@ const Hero = () => {
                 />
               </div>
 
-              <div className="flex gap-4 h-10 w-[400px] border-2 outline-3 outline-hero bg-background p-2 border-foreground">
+              <div className="flex gap-4 h-10 w-[400px] border-2 outline-3 outline-hero bg-background p-2 border-border-strong">
                 <Search className="ml-2 size-[18px]" />
                 <input
                   className="outline-none bg-transparent"
@@ -210,8 +210,8 @@ const Hero = () => {
 
               {/* Tag Chips */}
               <div className="flex h-10 gap-5">
-                <div className="flex items-center gap-3 border border-foreground w-[120px] p-1 px-2 font-semibold bg-[#FFC900] rounded-sm shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
-                  <div className="h-7 w-7 border-2 border-foreground rounded-sm">
+                <div className="flex items-center gap-3 border border-border-strong w-[120px] p-1 px-2 font-semibold bg-[#FFC900] rounded-sm shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
+                  <div className="h-7 w-7 border-2 border-border-strong rounded-sm">
                     <Image
                       src="/image/icon.jfif"
                       alt="@shadcn"
@@ -223,8 +223,8 @@ const Hero = () => {
                   <h2>Orla</h2>
                   <X className="size-4" />
                 </div>
-                <div className="flex items-center gap-3 border border-foreground w-[120px] p-1 px-2 font-semibold bg-[#11A365] rounded-lg shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
-                  <div className="h-7 w-7 border-2 border-foreground rounded-md">
+                <div className="flex items-center gap-3 border border-border-strong w-[120px] p-1 px-2 font-semibold bg-[#11A365] rounded-lg shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
+                  <div className="h-7 w-7 border-2 border-border-strong rounded-md">
                     <Image
                       src="/image/icon2.jpg"
                       alt="@shadcn"
@@ -236,8 +236,8 @@ const Hero = () => {
                   <h2>Orla</h2>
                   <X className="size-4" />
                 </div>
-                <div className="flex items-center gap-3 border border-foreground w-[120px] p-1 px-2 font-semibold bg-[#FF7051] rounded-full shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
-                  <div className="h-7 w-7 border-2 border-foreground rounded-full">
+                <div className="flex items-center gap-3 border border-border-strong w-[120px] p-1 px-2 font-semibold bg-[#FF7051] rounded-full shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
+                  <div className="h-7 w-7 border-2 border-border-strong rounded-full">
                     <Image
                       src="/image/icon3.jfif"
                       alt="@shadcn"
@@ -252,8 +252,8 @@ const Hero = () => {
               </div>
 
               {/* Notification Card */}
-              <div className="w-[400px] p-4 bg-background flex gap-4 h-30 shadow-neo rounded-sm border-2 border-foreground hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
-                <div className="h-11 w-11 border-2 border-foreground rounded-full">
+              <div className="w-[400px] p-4 bg-background flex gap-4 h-30 shadow-neo rounded-sm border-2 border-border-strong hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
+                <div className="h-11 w-11 border-2 border-border-strong rounded-full">
                   <Image
                     src="/image/icon4.jpg"
                     alt="@shadcn"
@@ -274,7 +274,7 @@ const Hero = () => {
             {/* Right Column */}
             <div className="flex flex-col gap-6">
               {/* Google Sign In */}
-              <div className="w-[300px] flex gap-3 items-center justify-center h-12 bg-background shadow-neo border-2 border-r-0 border-foreground hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
+              <div className="w-[300px] flex gap-3 items-center justify-center h-12 bg-background shadow-neo border-2 border-r-0 border-border-strong hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
                 <FaGoogle className="size-6" />
                 <h2 className="font-semibold">Sign in with Google</h2>
               </div>
@@ -292,7 +292,7 @@ const Hero = () => {
               />
 
               {/* Stats Card */}
-              <div className="w-[300px] flex flex-col justify-center items-start pl-5 gap-2 h-30 border-2 border-foreground border-r-0 border-b-0  bg-background hover:bg-hero/10 transition-all duration-150">
+              <div className="w-[300px] flex flex-col justify-center items-start pl-5 gap-2 h-30 border-2 border-border-strong border-r-0 border-b-0  bg-background hover:bg-hero/10 transition-all duration-150">
                 <h2 className="text-md text-foreground/70">Total Income</h2>
                 <h2 className="text-4xl font-semibold">$129,000.00</h2>
               </div>
