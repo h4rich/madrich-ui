@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea",
+  "type": "registry:ui",
+  "title": "Textarea",
+  "description": "Displays a form textarea or a component that looks like a textarea.",
+  "files": [
+    {
+      "path": "registry/new-york/ui/textarea.tsx",
+      "content": "import * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Textarea({ className, ...props }: React.ComponentProps<\"textarea\">) {\n  return (\n    <textarea\n      data-slot=\"textarea\"\n      className={cn(\n        \"flex min-h-[80px] w-[500px] rounded-base border-2 hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 border-foreground bg-secondary-background selection:bg-main selection:text-main-foreground px-3 py-2 text-sm font-base text-foreground placeholder:text-foreground/50 focus-visible:outline-none shadow-neo disabled:cursor-not-allowed disabled:opacity-50\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Textarea };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

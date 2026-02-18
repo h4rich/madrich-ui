@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "type": "registry:ui",
+  "title": "Checkbox",
+  "description": "A control that allows the user to toggle between checked and not checked.",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/checkbox.tsx",
+      "content": "\"use client\";\n\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\";\nimport { Check } from \"lucide-react\";\n\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Checkbox({\n  className,\n  ...props\n}: React.ComponentProps<typeof CheckboxPrimitive.Root>) {\n  return (\n    <CheckboxPrimitive.Root\n      data-slot=\"checkbox\"\n      className={cn(\n        \"peer size-5 shrink-0 outline-2 outline-foreground ring-offset-white focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-hero data-[state=checked]:text-foreground\",\n        className,\n      )}\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator\n        data-slot=\"checkbox-indicator\"\n        className={cn(\"flex items-center justify-center text-current\")}\n      >\n        <Check className=\"size-4 text-main-foreground\" />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  );\n}\n\nexport { Checkbox };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

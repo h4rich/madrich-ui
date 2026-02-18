@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "image-card",
+  "type": "registry:ui",
+  "title": "Image Card",
+  "description": "A card component optimized for displaying images with captions.",
+  "files": [
+    {
+      "path": "registry/new-york/ui/image-card.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\ntype Props = {\n  imageUrl: string;\n  caption: string;\n  className?: string;\n};\n\nexport default function ImageCard({ imageUrl, caption, className }: Props) {\n  return (\n    <figure\n      className={cn(\n        \"w-[250px] overflow-hidden rounded-base border-2 border-foreground font-base shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150\",\n        className,\n      )}\n    >\n      <img\n        className=\"w-full aspect-4/3 object-cover object-top \"\n        src={imageUrl}\n        alt=\"image\"\n      />\n      <figcaption className=\"border-t-2 text-main-foreground border-foreground p-4\">\n        {caption}\n      </figcaption>\n    </figure>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

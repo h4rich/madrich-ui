@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-card",
+  "type": "registry:ui",
+  "title": "Tooltip Card",
+  "description": "A card that displays information when hovered.",
+  "files": [
+    {
+      "path": "registry/new-york/ui/tooltip-card.tsx",
+      "content": "import * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\ninterface TooltipCardProps {\n  title?: string;\n  description?: string;\n  className?: string;\n}\n\nfunction TooltipCard({\n  title = \"Tooltip text\",\n  description = \"A tooltip shows additional information related to an element. It appears when the user hovers or focuses on the item.\",\n  className,\n}: TooltipCardProps) {\n  return (\n    <div className={cn(\"relative inline-block\", className)}>\n      <div\n        data-slot=\"tooltip-card\"\n        className=\"border-2 p-3  border-foreground bg-background shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150\"\n      >\n        <h2 className=\"text-sm font-semibold pb-1\">{title}</h2>\n        <p className=\"text-xs\">{description}</p>\n      </div>\n    </div>\n  );\n}\n\nexport { TooltipCard };\n",
+      "type": "registry:ui"
+    }
+  ]
+}
