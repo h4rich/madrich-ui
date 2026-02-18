@@ -15,7 +15,7 @@ export const CreatorCard = () => {
           alt="hero"
           width={250}
           height={250}
-          quality={100}
+          quality={25}
           className="h-full w-full rounded-full object-cover object-center"
         />
         <div className="opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-30">
@@ -39,6 +39,7 @@ export const CreatorCard = () => {
           alt="hero"
           width={250}
           height={250}
+          quality={50}
           className="h-full w-full rounded-full object-cover object-center"
         />
         <div className="opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-30">
