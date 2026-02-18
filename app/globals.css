@@ -195,3 +195,7 @@
     box-shadow: 8px 8px 0px 0px #000;
   }
 }
+
+pre.language-jsx {
+  border: 0;
+}
