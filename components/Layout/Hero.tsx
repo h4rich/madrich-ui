@@ -56,9 +56,9 @@ const profiles_mh = [
 const Hero = () => {
   return (
     <>
-      <div className="relative font-grotesk flex justify-between h-screen w-full max-w-[1440px] mx-auto mask-b-from-90% overflow-hidden">
+      <div className="relative font-grotesk border-dashed border-x-2 border-foreground flex justify-between h-screen w-full max-w-[1640px] mx-auto mask-b-from-90% overflow-hidden">
         {/* Left Section */}
-        <div className="flex flex-col mt-24 mb-16 lg:mb-0 lg:mt-0 mx-4 lg:mx-12 justify-between w-full lg:w-[50%] ">
+        <div className="flex max-h-screen flex-col mt-24 mb-16 lg:mb-0 lg:mt-0 mx-4 lg:mx-12 justify-between w-full lg:w-[50%] ">
           <div className="flex flex-col gap-4 mt-0 lg:mt-40">
             <h1 className="text-4xl md:text-6xl font-bold leading-[1.4] tracking-wide">
               <span className="border-4 border-border-strong bg-hero p-2 px-4 shadow-[8px_8px_0px_0px_var(--foreground)] inline-block transition-all duration-200 hover:shadow-[16px_16px_0px_0px_var(--foreground)] hover:-translate-y-2 hover:-translate-x-2 hover:-rotate-2 hover:bg-[#FFC900] cursor-pointer active:translate-x-0 active:translate-y-0 active:shadow-none active:rotate-0 animate-[neoBrutalBounce_0.6s_ease-out_0.3s_1]">
