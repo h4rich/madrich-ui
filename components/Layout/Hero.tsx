@@ -103,16 +103,16 @@ const Hero = () => {
         </div>
 
         {/* Right Section */}
-        <div className="hidden lg:flex w-[50%] mask-r-from-[85%] flex-col gap-6">
+        <div className="hidden lg:flex w-1/2 mask-r-from-[85%] flex-col gap-6">
           {/* Badges Row */}
           <div className="flex gap-5 justify-between">
-            <div className="flex mt-24 h-10 gap-5">
+                  <div className="flex mt-24 h-10 gap-5">
               <button className="border border-border-strong p-1 px-5 font-semibold bg-[#FFC900] rounded-sm shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
                 Badge
               </button>
               <button className="border border-border-strong p-1 px-5 font-semibold bg-[#11A365] rounded-lg shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
                 Badge
-              </button>
+                    </button>
               <button className="border border-border-strong p-1 px-5 font-semibold bg-[#FF7051] rounded-full shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
                 Badge
               </button>
