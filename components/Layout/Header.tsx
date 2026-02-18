@@ -321,8 +321,8 @@ export const SearchBar = ({
       <span className="w-full text-foreground/60 font-medium select-none">
         Search...
       </span>
-      <kbd className="hidden xl:flex items-center gap-1 px-2 py-0.5 text-xs font-bold bg-foreground text-background border border-foreground">
-        <span>⌘ K</span>
+      <kbd className="hidden xl:grid place-items-center text-xs font-bold bg-foreground text-background border border-foreground">
+        ⌘<kbd>K</kbd>
       </kbd>
     </div>
   );
