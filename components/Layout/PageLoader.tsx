@@ -91,24 +91,27 @@ const PageLoader = () => {
         </div>
       </div>
 
-      {/* Neo-brutalist block spinner (shows on longer loads) */}
+      {/* Neo-brutalist block spinner and Blurred Overlay */}
       {isLoading && progress < 90 && (
-        <div className="fixed inset-0 z-[9998] pointer-events-none flex items-center justify-center">
-          <div className="flex gap-2 animate-bounce">
-            <div
-              className="w-4 h-4 bg-hero border-2 border-foreground shadow-[2px_2px_0px_0px_var(--foreground)]"
-              style={{ animationDelay: "0ms" }}
-            />
-            <div
-              className="w-4 h-4 bg-[#FFC900] border-2 border-foreground shadow-[2px_2px_0px_0px_var(--foreground)] animate-bounce"
-              style={{ animationDelay: "150ms" }}
-            />
-            <div
-              className="w-4 h-4 bg-[#80C551] border-2 border-foreground shadow-[2px_2px_0px_0px_var(--foreground)] animate-bounce"
-              style={{ animationDelay: "300ms" }}
-            />
+        <>
+          <div className="fixed inset-0 z-[9997] bg-background/20 backdrop-blur-[2px] transition-opacity duration-300 animate-in fade-in" />
+          <div className="fixed inset-0 z-[9998] pointer-events-none flex items-center justify-center">
+            <div className="flex gap-2 animate-bounce">
+              <div
+                className="w-4 h-4 bg-hero border-2 border-foreground shadow-[2px_2px_0px_0px_var(--foreground)]"
+                style={{ animationDelay: "0ms" }}
+              />
+              <div
+                className="w-4 h-4 bg-[#FFC900] border-2 border-foreground shadow-[2px_2px_0px_0px_var(--foreground)] animate-bounce"
+                style={{ animationDelay: "150ms" }}
+              />
+              <div
+                className="w-4 h-4 bg-[#80C551] border-2 border-foreground shadow-[2px_2px_0px_0px_var(--foreground)] animate-bounce"
+                style={{ animationDelay: "300ms" }}
+              />
+            </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );
