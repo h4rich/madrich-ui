@@ -101,7 +101,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER!} />
-      <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION!} />
+      <meta
+        name="google-site-verification"
+        content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION!}
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${grotesk.variable} ${pressStart2P.variable} antialiased`}
       >
