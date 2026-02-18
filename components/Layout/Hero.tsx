@@ -56,7 +56,7 @@ const profiles_mh = [
 const Hero = () => {
   return (
     <>
-      <div className="relative font-grotesk flex justify-between h-screen w-full mask-b-from-90% overflow-hidden">
+      <div className="relative font-grotesk flex justify-between h-screen w-full max-w-[1440px] mx-auto mask-b-from-90% overflow-hidden">
         {/* Left Section */}
         <div className="flex flex-col mt-24 mb-16 lg:mb-0 lg:mt-0 mx-4 lg:mx-12 justify-between w-full lg:w-[50%] ">
           <div className="flex flex-col gap-4 mt-0 lg:mt-40">
