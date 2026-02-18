@@ -14,18 +14,6 @@ const links = [
     name: "Components",
     href: "/components/Accordion",
   },
-  {
-    name: "Docs",
-    href: "#",
-  },
-  {
-    name: "Templates",
-    href: "#",
-  },
-  {
-    name: "Showcase",
-    href: "#",
-  },
 ];
 
 const Header = () => {

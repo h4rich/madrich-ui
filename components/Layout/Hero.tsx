@@ -58,7 +58,7 @@ const Hero = () => {
     <>
       <div className="relative font-grotesk flex justify-between h-screen w-full mask-b-from-90% overflow-hidden">
         {/* Left Section */}
-        <div className="flex flex-col gap-3 pl-4 md:pl-10 lg:pl-20 justify-center lg:justify-between w-full lg:w-[60%]">
+        <div className="flex flex-col mt-24 lg:mt-0 mx-4 lg:mx-16 justify-between w-full lg:w-[60%] ">
           <div className="flex flex-col gap-4 mt-0 lg:mt-40">
             <h1 className="text-4xl md:text-6xl font-bold leading-[1.4] tracking-wide">
               <span className="border-4 border-foreground bg-hero p-2 px-4 shadow-[8px_8px_0px_0px_var(--foreground)] inline-block transition-all duration-200 hover:shadow-[16px_16px_0px_0px_var(--foreground)] hover:-translate-y-2 hover:-translate-x-2 hover:-rotate-2 hover:bg-[#FFC900] cursor-pointer active:translate-x-0 active:translate-y-0 active:shadow-none active:rotate-0 animate-[neoBrutalBounce_0.6s_ease-out_0.3s_1]">
@@ -82,11 +82,11 @@ const Hero = () => {
           </div>
 
           {/* Bottom Left Avatars */}
-          <div className="flex flex-col md:flex-row justify-between items-center mr-4 lg:mr-16 gap-4 md:gap-0">
+          <div className="flex flex-row justify-between items-center mr-4 lg:mr-16 sm:mt-16 mt-0">
             <div className="">
               <CreatorCard />
             </div>
-            <div className="hidden lg:flex flex-col gap-8">
+            <div className="hidden md:flex flex-col gap-8">
               <AvatarGroupCountExample />
               <InputWithLabelDemo />
               <div className="w-[300px] h-20 flex items-center justify-between p-6 border-2 bg-[#E9DCFE] rounded-sm rounded-b-none border-b-0 border-hero cursor-pointer">
