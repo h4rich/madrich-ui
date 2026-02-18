@@ -21,13 +21,9 @@ export const CreatorCard = () => {
         <div className="opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-30">
           <div className="bg-background border-2 border-foreground shadow-neo p-2 px-3 whitespace-nowrap absolute -top-38 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <h3 className="font-semibold text-sm">Harish Suthar</h3>
-            <Link
-              href="https://github.com/h4rich"
-              target="_blank"
-              className="text-xs text-hero font-medium flex items-center gap-1 hover:underline"
-            >
+            <span className="text-xs text-hero font-medium flex items-center gap-1 hover:underline">
               <CodeXml className="size-3" /> github.com/h4rich
-            </Link>
+            </span>
           </div>
           <div className="size-3 bg-background border-r-2 border-b-2 border-foreground rotate-45 absolute -top-31 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
@@ -48,13 +44,9 @@ export const CreatorCard = () => {
         <div className="opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-30">
           <div className="bg-background border-2 border-foreground shadow-neo p-2 px-3 whitespace-nowrap absolute -top-38 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <h3 className="font-semibold text-sm">Manish Suthar</h3>
-            <Link
-              href="https://github.com/m4dd0c"
-              target="_blank"
-              className="text-xs text-hero font-medium flex items-center gap-1 hover:underline"
-            >
+            <span className="text-xs text-hero font-medium flex items-center gap-1 hover:underline">
               <CodeXml className="size-3" /> github.com/m4dd0c
-            </Link>
+            </span>
           </div>
           <div className="size-3 bg-background border-r-2 border-b-2 border-foreground rotate-45 absolute -top-31 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
