@@ -56,7 +56,7 @@ const profiles_mh = [
 const Hero = () => {
   return (
     <>
-      <div className="relative font-grotesk border-dashed border-x-2 border-foreground flex justify-between h-screen w-full max-w-[1640px] mx-auto mask-b-from-90% overflow-hidden">
+      <div className="relative font-grotesk flex justify-between h-screen w-full max-w-[1640px] mx-auto mask-b-from-90% overflow-hidden">
         {/* Left Section */}
         <div className="flex max-h-screen flex-col mt-24 mb-16 lg:mb-0 lg:mt-0 mx-4 lg:mx-12 justify-between w-full lg:w-[50%] ">
           <div className="flex flex-col gap-4 mt-0 lg:mt-40">
@@ -103,7 +103,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section */}
-        <div className="hidden lg:flex w-[50%] flex-col gap-6">
+        <div className="hidden lg:flex w-[50%] mask-r-from-90% flex-col gap-6">
           {/* Badges Row */}
           <div className="flex gap-5 justify-between">
             <div className="flex mt-24 h-10 gap-5">
