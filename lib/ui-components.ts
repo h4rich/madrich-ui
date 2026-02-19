@@ -1944,7 +1944,6 @@ for (const component in components) {
   });
 }
 
-
 const css = `
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -2148,6 +2147,6 @@ const css = `
   }
 }
 
-`
+`;
 
 export { components, componentsList, css };

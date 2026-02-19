@@ -2,11 +2,12 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import Example from "@/components/shared/Example";
+import GlobalsCss from "@/components/shared/GlobalsCss";
 import Header from "@/components/shared/Header";
 import Installation from "@/components/shared/Installation";
 import Preview from "@/components/shared/Preview";
 import Usage from "@/components/shared/Usage";
-import { components } from "@/lib/ui-components";
+import { components, css } from "@/lib/ui-components";
 
 type PageProps = {
   params: Promise<{
@@ -46,6 +47,7 @@ const Page = ({ params }: PageProps) => {
         cli={comp.sections.installation.cli}
         code={comp.sections.installation.code}
       />
+      <GlobalsCss css={css} />
       <Usage code={comp.sections.usage.code} />
       <Example examples={comp.sections.example} />
     </div>

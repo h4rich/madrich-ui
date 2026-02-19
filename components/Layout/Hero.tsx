@@ -103,7 +103,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section */}
-        <div className="hidden lg:flex w-1/2 mask-r-from-[85%] flex-col gap-6">
+        <div className="hidden lg:flex w-1/2 mask-r-from-[85%] flex-col gap-6 pl-4 overflow-hidden">
           {/* Badges Row */}
           <div className="flex gap-5 justify-between">
             <div className="flex mt-24 h-10 gap-5">
