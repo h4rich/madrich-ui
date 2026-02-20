@@ -2,15 +2,16 @@ import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
 
 // ✅ Two recipient emails
-const RECIPIENT_1 = process.env.EMAIL_RECIPIENT_1 || "harishsuthar739@gmail.com";
+const RECIPIENT_1 =
+  process.env.EMAIL_RECIPIENT_1 || "harishsuthar739@gmail.com";
 const RECIPIENT_2 = process.env.EMAIL_RECIPIENT_2 || "admin@madrich.dev";
 
 // ✅ Gmail SMTP transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.GMAIL_USER,   // Your Gmail address
-    pass: process.env.GMAIL_PASS,   // Gmail App Password (not your login password)
+    user: process.env.GMAIL_USER, // Your Gmail address
+    pass: process.env.GMAIL_PASS, // Gmail App Password (not your login password)
   },
 });
 
@@ -48,7 +49,7 @@ export async function POST(req: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "All fields are required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -72,7 +73,7 @@ export async function POST(req: NextRequest) {
       console.error("Both email sends failed:", result1, result2);
       return NextResponse.json(
         { error: "Failed to send email. Please try again later." },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -81,7 +82,7 @@ export async function POST(req: NextRequest) {
     console.error("Contact API error:", err);
     return NextResponse.json(
       { error: "Internal server error." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

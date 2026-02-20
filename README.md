@@ -25,6 +25,7 @@
 - **Code Previews** — Live component previews with syntax-highlighted source code via Prism.js
 - **Tailwind CSS v4** — Uses the latest Tailwind with CSS-first configuration and custom design tokens
 - **shadcn Registry Compatible** — Components can be distributed via the `shadcn` CLI
+- **Contact Form** — Functional contact form with Nodemailer (Gmail SMTP), dual-recipient delivery, and neo-brutalism Sonner toast notifications
 
 ---
 
@@ -39,7 +40,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/m4dd0c/madrich-ui.git
+git clone https://github.com/h4rich/madrich-ui.git
 cd madrich-ui
 
 # Install dependencies
@@ -60,6 +61,25 @@ pnpm start
 
 ---
 
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the root of the project with the following variables:
+
+```env
+# Gmail SMTP (Nodemailer) — used by the contact form
+GMAIL_USER=your@gmail.com          # Gmail address that sends emails
+GMAIL_PASS=xxxx xxxx xxxx xxxx    # Gmail App Password (not your login password)
+                                   # Generate at: https://myaccount.google.com/apppasswords
+
+# Both emails below receive every contact form submission
+EMAIL_RECIPIENT_1=your@gmail.com
+EMAIL_RECIPIENT_2=admin@yourdomain.com
+```
+
+> **Note:** Gmail App Password requires 2-Step Verification to be enabled on your Google Account. Never commit `.env.local` to version control.
+
+---
+
 ## 📂 Project Structure
 
 ```
@@ -68,6 +88,8 @@ madrich-ui/
 │   ├── (home)/                 # Landing page (Hero, Features, Show, QnA, Contact)
 │   │   ├── privacy-policy/     # Privacy policy page
 │   │   └── term-condition/     # Terms & conditions page
+│   ├── api/
+│   │   └── contact/            # POST /api/contact — sends email via Nodemailer
 │   ├── components/             # Component documentation pages
 │   │   ├── layout.tsx          # Sidebar + header layout for docs
 │   │   └── [...slug]/          # Dynamic route for individual components
@@ -81,7 +103,7 @@ madrich-ui/
 │   │   ├── Features.tsx        # "Why This Library Exists" feature grid
 │   │   ├── Show.tsx            # Component showcase section
 │   │   ├── QnA.tsx             # FAQ / Q&A section
-│   │   ├── Contact.tsx         # Contact section
+│   │   ├── Contact.tsx         # Contact form with email + toast notifications
 │   │   ├── Footer.tsx          # Site footer with links & socials
 │   │   ├── LeftSidebar.tsx     # Component docs sidebar navigation
 │   │   ├── ComponentHeader.tsx # Component page header
@@ -155,20 +177,22 @@ Madrich UI uses a custom design token system defined in `globals.css`:
 
 ## 🛠️ Tech Stack
 
-| Technology          | Purpose                             |
-| ------------------- | ----------------------------------- |
-| **Next.js 15**      | React framework with App Router     |
-| **React 19**        | UI rendering                        |
-| **Tailwind CSS v4** | Utility-first styling               |
-| **Radix UI**        | Accessible headless primitives      |
-| **shadcn/ui**       | Component registry system           |
-| **next-themes**     | Dark/light mode switching           |
-| **Prism.js**        | Syntax highlighting for code blocks |
-| **Lucide React**    | Icon library                        |
-| **Zod**             | Schema validation                   |
-| **Turbopack**       | Fast development server bundler     |
-| **Husky**           | Git hooks for code quality          |
-| **Prettier**        | Code formatting                     |
+| Technology          | Purpose                                       |
+| ------------------- | --------------------------------------------- |
+| **Next.js 15**      | React framework with App Router               |
+| **React 19**        | UI rendering                                  |
+| **Tailwind CSS v4** | Utility-first styling                         |
+| **Radix UI**        | Accessible headless primitives                |
+| **shadcn/ui**       | Component registry system                     |
+| **next-themes**     | Dark/light mode switching                     |
+| **Nodemailer**      | Gmail SMTP email sending for the contact form |
+| **Sonner**          | Toast notifications (neo-brutalism styled)    |
+| **Prism.js**        | Syntax highlighting for code blocks           |
+| **Lucide React**    | Icon library                                  |
+| **Zod**             | Schema validation                             |
+| **Turbopack**       | Fast development server bundler               |
+| **Husky**           | Git hooks for code quality                    |
+| **Prettier**        | Code formatting                               |
 
 ---
 
