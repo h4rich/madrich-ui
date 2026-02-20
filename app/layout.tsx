@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     siteName: "Madrich UI",
     images: [
       {
-        url: "/og-image.png",
+        url: "/image/og-image.png",
         width: 1200,
         height: 630,
         alt: "Madrich UI",
@@ -82,13 +82,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Madrich UI",
     description: "The neo-brutalist UI library for developers who build bold.",
-    images: ["/og-image.png"],
+    images: ["/image/og-image.png"],
     creator: "@h4rich_",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/image/fav2.png", type: "image/png" }],
+    shortcut: "/image/fav2.png",
+    apple: "/image/fav2.png",
   },
   metadataBase: new URL("https://madrich-ui.vercel.app"),
 };

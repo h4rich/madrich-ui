@@ -213,11 +213,11 @@ const Hero = () => {
                 <div className="flex items-center gap-3 border border-border-strong w-[120px] p-1 px-2 font-semibold bg-[#FFC900] rounded-sm shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
                   <div className="h-7 w-7 border-2 border-border-strong rounded-sm">
                     <Image
-                      src="/image/icon.jfif"
+                      src="/image/one.png"
                       alt="@shadcn"
                       width={100}
                       height={100}
-                      className="h-full w-full rounded-[4px] object-fill"
+                      className="h-full w-full rounded-[4px] object-cover"
                     />
                   </div>
                   <h2>Orla</h2>
@@ -239,7 +239,7 @@ const Hero = () => {
                 <div className="flex items-center gap-3 border border-border-strong w-[120px] p-1 px-2 font-semibold bg-[#FF7051] rounded-full shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 cursor-pointer">
                   <div className="h-7 w-7 border-2 border-border-strong rounded-full">
                     <Image
-                      src="/image/icon3.jfif"
+                      src="/image/icon4.jpg"
                       alt="@shadcn"
                       width={100}
                       height={100}

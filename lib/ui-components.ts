@@ -85,7 +85,7 @@ function AccordionItem({
     <AccordionPrimitive.Item
       data-slot="accordion-item"
       className={cn(
-        "rounded-base overflow-hidden border-2 border-foreground border-b-2 shadow-neo",
+        "overflow-hidden border-2 border-foreground border-b-2 shadow-neo",
         className,
       )}
       {...props}
@@ -269,7 +269,7 @@ function AlertDialogContent({
       <AlertDialogPrimitive.Content
         data-slot="alert-dialog-content"
         className={cn(
-          "bg-background  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-center-1/2 data-[state=open]:slide-in-from-center-1/2 fixed top-1/2 left-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-base border-2 border-foreground p-6 shadow-neo duration-200",
+          "bg-background  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-center-1/2 data-[state=open]:slide-in-from-center-1/2 fixed top-1/2 left-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 border-2 border-foreground p-6 shadow-neo duration-200",
           className,
         )}
         {...props}
@@ -649,7 +649,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap cursor-pointer rounded-base text-sm font-base ring-offset-white transition-all gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 focus-visible:outline-hidden focus-visible:ring-2  focus-visible:ring-black focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap cursor-pointer text-sm font-base ring-offset-white transition-all gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 focus-visible:outline-hidden focus-visible:ring-2  focus-visible:ring-black focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -852,7 +852,7 @@ export default function ImageCard({ imageUrl, caption, className }: Props) {
   return (
     <figure
       className={cn(
-        "w-[250px] overflow-hidden rounded-base border-2 border-foreground font-base shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150",
+        "w-[250px] overflow-hidden border-2 border-foreground font-base shadow-neo hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150",
         className,
       )}
     >
@@ -924,7 +924,7 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       type={type}
       data-slot="input"
       className={cn(
-        "flex shadow-neo h-10 w-full rounded-base border-2 border-foreground hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 bg-secondary-background selection:bg-main selection:text-main-foreground px-3 py-2 text-sm font-base text-foreground file:border-0 file:bg-transparent file:text-sm file:font-heading placeholder:text-foreground/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
+        "flex shadow-neo h-10 w-full border-2 border-foreground hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 bg-secondary-background selection:bg-main selection:text-main-foreground px-3 py-2 text-sm font-base text-foreground file:border-0 file:bg-transparent file:text-sm file:font-heading placeholder:text-foreground/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
         className,
       )}
       {...props}
@@ -1398,7 +1398,7 @@ function SelectTrigger({
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "flex h-10 w-full shadow-neo items-center cursor-pointer justify-between rounded-base border-2 border-foreground bg-hero gap-2 px-3 py-2 text-sm font-base text-foreground placeholder:text-foreground/50 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "flex h-10 w-full shadow-neo items-center cursor-pointer justify-between border-2 border-foreground bg-hero gap-2 px-3 py-2 text-sm font-base text-foreground placeholder:text-foreground/50 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}
@@ -1458,7 +1458,7 @@ function SelectContent({
       <SelectPrimitive.Content
         data-slot="select-content"
         className={cn(
-          "relative z-50 cursor-pointer  max-h-96 min-w-[8rem] overflow-hidden rounded-base border-2 border-foreground bg-hero text-main-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-select-content-transform-origin)",
+          "relative z-50 cursor-pointer  max-h-96 min-w-[8rem] overflow-hidden border-2 border-foreground bg-hero text-main-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-select-content-transform-origin)",
           position === "popper" &&
             "data-[side=bottom]:translate-y-3 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           className,
@@ -1507,7 +1507,7 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-base py-1.5 pr-8 pl-2 text-sm border-2 border-transparent font-base outline-none  focus:border-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "relative flex w-full cursor-pointer select-none items-center gap-2 py-1.5 pr-8 pl-2 text-sm border-2 border-transparent font-base outline-none  focus:border-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         className,
       )}
       {...props}
@@ -1820,7 +1820,7 @@ function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
     <textarea
       data-slot="textarea"
       className={cn(
-        "flex min-h-[80px] w-[500px] rounded-base border-2 hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 border-foreground bg-secondary-background selection:bg-main selection:text-main-foreground px-3 py-2 text-sm font-base text-foreground placeholder:text-foreground/50 focus-visible:outline-none shadow-neo disabled:cursor-not-allowed disabled:opacity-50",
+        "flex min-h-[80px] w-[500px] border-2 hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150 border-foreground bg-secondary-background selection:bg-main selection:text-main-foreground px-3 py-2 text-sm font-base text-foreground placeholder:text-foreground/50 focus-visible:outline-none shadow-neo disabled:cursor-not-allowed disabled:opacity-50",
         className,
       )}
       {...props}
@@ -2103,24 +2103,7 @@ const css = `
   .shadow-neo {
     @apply shadow-[5px_5px_0px_0px_var(--foreground)];
   }
-  .shadow-neo-sm {
-    box-shadow: 3px 3px 0px 0px rgb(var(--neo-shadow-color));
-  }
-  .shadow-neo-md {
-    box-shadow: 6px 6px 0px 0px rgb(var(--neo-shadow-color));
-  }
-  .shadow-neo-lg {
-    box-shadow: 8px 8px 0px 0px rgb(var(--neo-shadow-color));
-  }
-  .hover\:shadow-neo-sm:hover {
-    box-shadow: 2px 2px 0px 0px rgb(var(--neo-shadow-color));
-  }
-  .hover\:shadow-neo-xs:hover {
-    box-shadow: 4px 4px 0px 0px rgb(var(--neo-shadow-color));
-  }
-  .shadow-neo-4 {
-    box-shadow: 4px 4px 0px 0px rgb(var(--neo-shadow-color));
-  }
+    
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
