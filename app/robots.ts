@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://madrich-ui.vercel.app/sitemap.xml",
+    sitemap: "https://brutalcn.vercel.app/sitemap.xml",
   };
 }
