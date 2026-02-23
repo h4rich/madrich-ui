@@ -4,7 +4,10 @@
   "type": "registry:ui",
   "title": "Select",
   "description": "Displays a list of options for the user to pick from—triggered by a button.",
-  "dependencies": ["@radix-ui/react-select", "lucide-react"],
+  "dependencies": [
+    "@radix-ui/react-select",
+    "lucide-react"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/select.tsx",

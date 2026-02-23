@@ -22,7 +22,7 @@
       "title": "Alert Dialog",
       "description": "A modal dialog that interrupts the user with important content and expects a response.",
       "dependencies": ["@radix-ui/react-alert-dialog"],
-      "registryDependencies": ["button"],
+      "registryDependencies": ["https://brutalcn.vercel.app/r/button.json"],
       "files": [
         {
           "path": "registry/new-york/ui/alertdialog.tsx",
