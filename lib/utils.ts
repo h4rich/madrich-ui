@@ -23,8 +23,8 @@ const formRegistryUrl = (component: string, registry: string) => {
 
 export const formRegistryUrlsObject = (component: string) => {
   return {
-    pnpm: formRegistryUrl(component, "pnpm"),
     npm: formRegistryUrl(component, "npm"),
+    pnpm: formRegistryUrl(component, "pnpm"),
     yarn: formRegistryUrl(component, "yarn"),
     bun: formRegistryUrl(component, "bun"),
   };
