@@ -13,14 +13,14 @@ import {
   Bell,
   UserCheck,
 } from "lucide-react";
-const url = "https://madrich-ui.vercel.app/";
+const url = "https://brutalcn.vercel.app/";
 const termsAndConditionsSections = [
   {
     icon: FileText,
     title: "Acceptance of Terms",
     color: "bg-[#80C551]",
     content: [
-      "By accessing and using the Madrich UI website and component library, you accept and agree to be bound by these Terms and Conditions.",
+      "By accessing and using the BrutalCN website and component library, you accept and agree to be bound by these Terms and Conditions.",
       "If you do not agree to these terms, you should discontinue use of our services immediately.",
       "We reserve the right to modify these terms at any time. Continued use of the site constitutes acceptance of any changes.",
     ],
@@ -30,7 +30,7 @@ const termsAndConditionsSections = [
     title: "Use License",
     color: "bg-[#FFC900]",
     content: [
-      "Madrich UI components are provided for both personal and commercial use in your projects.",
+      "BrutalCN components are provided for both personal and commercial use in your projects.",
       "You may use, modify, and distribute the components in your own applications without restriction.",
       "You may not redistribute the component library itself as a competing product or template.",
       "Attribution is appreciated but not required when using individual components.",
@@ -53,7 +53,7 @@ const termsAndConditionsSections = [
     color: "bg-[#FF7051]",
     content: [
       "Scraping, crawling, or using automated tools to extract content from the website for competitive purposes.",
-      "Impersonating Madrich UI or its creators in any capacity.",
+      "Impersonating BrutalCN or its creators in any capacity.",
       "Using our services to distribute malware, spam, or any harmful content.",
       "Attempting to reverse engineer, decompile, or extract the source code of proprietary parts of the platform.",
     ],
@@ -63,7 +63,7 @@ const termsAndConditionsSections = [
     title: "Disclaimer of Warranties",
     color: "bg-[#E9DCFE] dark:bg-card-surface",
     content: [
-      'Madrich UI components are provided "as is" without any warranties, express or implied.',
+      'BrutalCN components are provided "as is" without any warranties, express or implied.',
       "We do not guarantee that the components will be error-free, uninterrupted, or compatible with all environments.",
       "You assume all responsibility and risk for the use of our components in your applications.",
       "We are not liable for any damages arising from the use or inability to use our components.",
@@ -74,7 +74,7 @@ const termsAndConditionsSections = [
     title: "Modifications & Updates",
     color: "bg-[#80C551]",
     content: [
-      "We may update, modify, or discontinue any part of the Madrich UI library at any time without prior notice.",
+      "We may update, modify, or discontinue any part of the BrutalCN library at any time without prior notice.",
       "Component APIs and styling may change between versions. We recommend pinning specific versions in production.",
       "These Terms and Conditions may be revised periodically. The latest version will always be available on this page.",
     ],
@@ -108,7 +108,7 @@ const primaryPolicySections = [
     color: "bg-[#80C551]",
     content: [
       "To respond to inquiries submitted through our contact form.",
-      "To improve and optimize the Madrich UI website and component library.",
+      "To improve and optimize the BrutalCN website and component library.",
       "To send occasional updates about new components, features, or releases (only if you opt in).",
       "To analyze usage patterns and enhance user experience.",
     ],

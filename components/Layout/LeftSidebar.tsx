@@ -9,7 +9,7 @@ const LeftSidebar = ({ onClose }: { onClose?: () => void }) => {
       <div className="flex flex-col">
         <div className="flex items-center justify-between mb-2">
           <Link href="/" className="text-2xl sm:text-3xl font-bold">
-            Madrich UI
+            BrutalCN
           </Link>
           {onClose && (
             <button

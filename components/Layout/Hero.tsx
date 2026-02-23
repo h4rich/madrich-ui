@@ -288,7 +288,7 @@ const Hero = () => {
 
               <Textarea
                 className="w-[300px] border-r-0 bg-background"
-                placeholder="What are your thoughts on Madrich UI?"
+                placeholder="What are your thoughts on BrutalCN?"
               />
 
               {/* Stats Card */}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "madrich-ui",
-  "homepage": "https://madrich-ui.vercel.app",
+  "name": "brutalcn",
+  "homepage": "https://brutalcn.vercel.app",
   "items": [
     {
       "name": "accordion",

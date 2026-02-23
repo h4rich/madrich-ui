@@ -60,7 +60,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <Link href="/">
             <h1 className="text-md md:text-lg lg:text-xl bg-background font-bold  cursor-pointer border-[3px] border-border-strong p-1.5 px-3 shadow-neo hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150  tracking-wide">
-              Madrich UI
+              BrutalCN
             </h1>
           </Link>
 

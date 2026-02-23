@@ -50,7 +50,7 @@ const ComponentHeader = ({
             <h1 className="text-lg sm:text-xl md:text-2xl font-bold whitespace-nowrap">
               <span className="lg:inline-block hidden">Components</span>
               <Link href="/" className="lg:hidden inline-block">
-                Madrich UI
+                BrutalCN
               </Link>
             </h1>
           </div>

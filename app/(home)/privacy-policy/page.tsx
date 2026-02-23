@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
 
           <p className="text-lg md:text-xl font-bold max-w-2xl mx-auto">
             We believe in transparency. Here&apos;s exactly how we handle your
-            information at Madrich UI.
+            information at BrutalCN.
           </p>
 
           <div className="mt-6 inline-block bg-card-surface/80 border-2 border-foreground px-4 py-2 shadow-neo-sm">

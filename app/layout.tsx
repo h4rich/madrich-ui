@@ -41,8 +41,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Madrich UI",
-    template: "%s | Madrich UI",
+    default: "BrutalCN",
+    template: "%s | BrutalCN",
   },
   description: "The neo-brutalist UI library for developers who build bold.",
   keywords: [
@@ -65,22 +65,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://madrich-ui.vercel.app",
-    title: "Madrich UI",
+    url: "https://brutalcn.vercel.app",
+    title: "BrutalCN",
     description: "The neo-brutalist UI library for developers who build bold.",
-    siteName: "Madrich UI",
+    siteName: "BrutalCN",
     images: [
       {
         url: "/image/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Madrich UI",
+        alt: "BrutalCN",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Madrich UI",
+    title: "BrutalCN",
     description: "The neo-brutalist UI library for developers who build bold.",
     images: ["/image/og-image.png"],
     creator: "@h4rich_",
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     shortcut: "/image/fav2.png",
     apple: "/image/fav2.png",
   },
-  metadataBase: new URL("https://madrich-ui.vercel.app"),
+  metadataBase: new URL("https://brutalcn.vercel.app"),
 };
 
 export default function RootLayout({

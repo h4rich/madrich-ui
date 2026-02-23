@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">🎨 Madrich UI</h1>
+  <h1 align="center">🎨 BrutalCN</h1>
   <p align="center">
     <strong>The neo-brutalist UI library for developers who build bold.</strong>
   </p>
@@ -40,8 +40,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/h4rich/madrich-ui.git
-cd madrich-ui
+git clone https://github.com/h4rich/brutalcn.git
+cd brutalcn
 
 # Install dependencies
 pnpm install
@@ -83,7 +83,7 @@ EMAIL_RECIPIENT_2=admin@yourdomain.com
 ## 📂 Project Structure
 
 ```
-madrich-ui/
+brutalcn/
 ├── app/                        # Next.js App Router
 │   ├── (home)/                 # Landing page (Hero, Features, Show, QnA, Contact)
 │   │   ├── privacy-policy/     # Privacy policy page
@@ -164,7 +164,7 @@ madrich-ui/
 
 ## 🎨 Design System
 
-Madrich UI uses a custom design token system defined in `globals.css`:
+BrutalCN uses a custom design token system defined in `globals.css`:
 
 - **Hero color**: `#ae7aff` — the signature purple accent
 - **Shadow**: `shadow-neo` → `5px 5px 0px 0px #000` — the iconic neo-brutal box shadow
@@ -223,7 +223,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## 📄 License
 
-© 2025 Madrich UI. All rights reserved.
+© 2025 BrutalCN. All rights reserved.
 
 ---
 

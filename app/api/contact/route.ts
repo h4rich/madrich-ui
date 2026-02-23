@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 // ✅ Two recipient emails
 const RECIPIENT_1 =
   process.env.EMAIL_RECIPIENT_1 || "harishsuthar739@gmail.com";
-const RECIPIENT_2 = process.env.EMAIL_RECIPIENT_2 || "admin@madrich.dev";
+const RECIPIENT_2 = process.env.EMAIL_RECIPIENT_2 || "admin@brutalcn.dev";
 
 // ✅ Gmail SMTP transporter
 const transporter = nodemailer.createTransport({
@@ -37,7 +37,7 @@ const emailHtml = (name: string, email: string, message: string) => `
       </tr>
     </table>
     <div style="margin-top: 20px; border: 2px solid #000; padding: 10px 16px; background: #80C551; font-weight: 700; font-size: 12px; text-transform: uppercase;">
-      Sent via Madrich UI Contact Form
+      Sent via BrutalCN Contact Form
     </div>
   </div>
 `;
@@ -54,8 +54,8 @@ export async function POST(req: NextRequest) {
     }
 
     const mailOptions = {
-      from: `"Madrich UI" <${process.env.GMAIL_USER}>`,
-      subject: `✉️ New Message from ${name} — Madrich UI`,
+      from: `"BrutalCN" <${process.env.GMAIL_USER}>`,
+      subject: `✉️ New Message from ${name} — BrutalCN`,
       html: emailHtml(name, email, message),
       replyTo: email,
     };

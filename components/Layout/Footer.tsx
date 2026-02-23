@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <h1 className="text-xl md:text-2xl bg-background font-black cursor-pointer border-[3px] border-border-strong p-1.5 px-3 shadow-neo hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150  tracking-wide">
-                Madrich UI
+                BrutalCN
               </h1>
             </Link>
             <p className="font-bold text-lg max-w-sm">
@@ -69,7 +69,7 @@ const Footer = () => {
       <div className="border-t-4 border-border-strong bg-foreground p-4">
         <div className="max-w-[1400px] mx-auto flex justify-center items-center gap-4 text-background">
           <p className="font-bold text-sm uppercase tracking-wide">
-            © {new Date().getFullYear()} Madrich UI. All rights reserved.
+            © {new Date().getFullYear()} BrutalCN. All rights reserved.
           </p>
         </div>
       </div>

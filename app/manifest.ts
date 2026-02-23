@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Madrich UI",
-    short_name: "Madrich UI",
+    name: "BrutalCN",
+    short_name: "BrutalCN",
     description: "The neo-brutalist UI library for developers who build bold.",
     start_url: "/",
     display: "standalone",
@@ -18,4 +18,3 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
   };
 }
-  

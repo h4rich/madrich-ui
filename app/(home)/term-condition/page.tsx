@@ -34,7 +34,7 @@ export default function TermConditionPage() {
           </h1>
 
           <p className="text-lg md:text-xl font-bold max-w-2xl mx-auto">
-            The rules of engagement for using Madrich UI. Straightforward, no
+            The rules of engagement for using BrutalCN. Straightforward, no
             legal jargon — just the essentials.
           </p>
 
