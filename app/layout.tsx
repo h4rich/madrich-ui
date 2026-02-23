@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { url as SITE_URL } from "@/lib/const";
 
 const pressStart2P = Press_Start_2P({
   variable: "--font-press-start-2p",
@@ -40,38 +41,47 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "BrutalCN",
     template: "%s | BrutalCN",
   },
   description: "The neo-brutalist UI library for developers who build bold.",
-  keywords: [
-    "neo-brutalism",
-    "neo-brutalist",
-    "ui library",
-    "react",
-    "next.js",
-    "tailwindcss",
-    "components",
-    "design system",
-  ],
+  keywords:
+    "neo-brutalism, neo-brutalist, ui library, react, next.js, tailwindcss, components, design system, shadcn, BrutalCN, h4rich, m4dd0c",
   authors: [
     {
       name: "h4rich",
       url: "https://x.com/h4rich_",
     },
+    {
+      name: "m4dd0c",
+      url: "https://github.com/m4dd0c",
+    },
   ],
   creator: "h4rich",
+  category: "technology",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://brutalcn.vercel.app",
+    url: new URL(SITE_URL),
     title: "BrutalCN",
     description: "The neo-brutalist UI library for developers who build bold.",
     siteName: "BrutalCN",
     images: [
       {
-        url: "/image/og-image.png",
+        url: "/image/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: "BrutalCN",
@@ -82,15 +92,21 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BrutalCN",
     description: "The neo-brutalist UI library for developers who build bold.",
-    images: ["/image/og-image.png"],
+    site: "@h4rich_",
     creator: "@h4rich_",
+    images: ["/image/og-image.jpeg"],
   },
+  alternates: { canonical: "./" },
+  manifest: "/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/image/fav2.png", type: "image/png" }],
-    shortcut: "/image/fav2.png",
-    apple: "/image/fav2.png",
+    icon: [
+      { url: "/image/favicon.ico", type: "image/x-icon" },
+      { url: "/image/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/image/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: [{ url: "/image/favicon.ico", type: "image/x-icon" }],
+    apple: [{ url: "/image/apple-touch-icon.png", type: "image/png" }],
   },
-  metadataBase: new URL("https://brutalcn.vercel.app"),
 };
 
 export default function RootLayout({
