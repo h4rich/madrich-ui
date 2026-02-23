@@ -13,7 +13,7 @@ import {
   Bell,
   UserCheck,
 } from "lucide-react";
-const url = "https://madrich-ui.vercel.app/";
+const url = "https://brutalcn.vercel.app/";
 const termsAndConditionsSections = [
   {
     icon: FileText,
