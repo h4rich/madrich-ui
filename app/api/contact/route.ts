@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 // ✅ Two recipient emails
 const RECIPIENT_1 =
   process.env.EMAIL_RECIPIENT_1 || "harishsuthar739@gmail.com";
-const RECIPIENT_2 = process.env.EMAIL_RECIPIENT_2 || "admin@brutalcn.dev";
+const RECIPIENT_2 = process.env.EMAIL_RECIPIENT_2 || "manishsuthar078@gmail.com";
 
 // ✅ Gmail SMTP transporter
 const transporter = nodemailer.createTransport({
