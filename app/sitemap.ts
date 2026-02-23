@@ -45,6 +45,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: "https://brutalcn.vercel.app/about",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://brutalcn.vercel.app/sitemap-page",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: "https://brutalcn.vercel.app/components",
       lastModified: new Date(),
       changeFrequency: "weekly",

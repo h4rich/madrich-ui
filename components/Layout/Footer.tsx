@@ -8,12 +8,20 @@ const links = [
     href: "/components",
   },
   {
+    name: "About Us",
+    href: "/about",
+  },
+  {
     name: "Privacy Policy",
     href: "/privacy-policy",
   },
   {
     name: "Terms & Conditions",
     href: "/term-condition",
+  },
+  {
+    name: "Sitemap",
+    href: "/sitemap-page",
   },
 ];
 
