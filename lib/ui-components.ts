@@ -39,7 +39,7 @@ const components: ComponentsMap = {
         render: AccordionDemo,
         code: `
 import React from 'react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/registry/new-york/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
 
 const AccordionDemo = () => {
     return (
@@ -57,6 +57,9 @@ const AccordionDemo = () => {
 }
 
 export default AccordionDemo
+
+
+
         `,
       },
       installation: {
@@ -144,7 +147,7 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/registry/new-york/ui/accordion"`,
+} from "@/components/ui/accordion"`,
 
           `<Accordion type="single" collapsible className="w-full max-w-xl">
   <AccordionItem value="item-1">
@@ -178,8 +181,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/new-york/ui/alertdialog"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/components/ui/alertdialog"
+import { Button } from "@/components/ui/button"
 
 export default function AlertDialogDemo() {
   return (
@@ -217,7 +220,7 @@ import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 
 import * as React from "react"
 
-import { buttonVariants } from "@/registry/new-york/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 
 import { cn } from "@/lib/utils"
 
@@ -384,8 +387,8 @@ export {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/new-york/ui/alertdialog"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/components/ui/alertdialog"
+import { Button } from "@/components/ui/button"
 `,
 
           ` <AlertDialog>
@@ -420,7 +423,7 @@ import { Button } from "@/registry/new-york/ui/button"
       preview: {
         render: AvatarDemo,
         code: `
-import {Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+import {Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const AvatarDemo = () => {
   return (
@@ -531,7 +534,7 @@ export { Avatar, AvatarImage, AvatarGroup, AvatarFallback, AvatarGroupCount };
       },
       usage: {
         code: [
-          `import {Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+          `import {Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 `,
 
           `<Avatar>
@@ -546,7 +549,7 @@ export { Avatar, AvatarImage, AvatarGroup, AvatarFallback, AvatarGroupCount };
         AvatarGroup: {
           render: AvatarGroupExample,
           code: `
-import { AvatarGroup,Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+import { AvatarGroup,Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export function AvatarGroupExample() {
   return (
@@ -577,7 +580,7 @@ export function AvatarGroupExample() {
         AvatarGroupCount: {
           render: AvatarGroupCountExample,
           code: `
-import { AvatarGroup,Avatar, AvatarFallback,AvatarGroupCount, AvatarImage } from '@/registry/new-york/ui/avatar'
+import { AvatarGroup,Avatar, AvatarFallback,AvatarGroupCount, AvatarImage } from '@/components/ui/avatar'
 
 export function AvatarGroupCountExample() {
   return (
@@ -631,7 +634,7 @@ export function AvatarGroupCountExample() {
       preview: {
         render: ButtonDemo,
         code: `
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/components/ui/button"
 
 export default function ButtonDemo() {
   return <Button>Button</Button>
@@ -714,7 +717,7 @@ export { Button, buttonVariants };
         Neutral: {
           render: ButtonDemo2,
           code: `
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/components/ui/button"
 
 
 export function ButtonDemo2() {
@@ -726,7 +729,7 @@ export function ButtonDemo2() {
         NoShadow: {
           render: ButtonDemo3,
           code: `
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/components/ui/button"
 
 export function ButtonDemo3() {
   return <Button variant="noShadow">Button</Button>
@@ -747,7 +750,7 @@ export function ButtonDemo3() {
       preview: {
         render: CheckboxDemo,
         code: `
-import { Checkbox } from '@/registry/new-york/ui/checkbox'
+import { Checkbox } from '@/components/ui/checkbox'
 
 const CheckboxDemo = () => {
     return (
@@ -800,7 +803,7 @@ export { Checkbox }
       },
       usage: {
         code: [
-          `import { Checkbox } from '@/registry/new-york/ui/checkbox'
+          `import { Checkbox } from '@/components/ui/checkbox'
 `,
 
           `<Checkbox />
@@ -818,7 +821,7 @@ export { Checkbox }
       preview: {
         render: ImageCardDemo,
         code: `
-import ImageCard from '@/registry/new-york/ui/image-card'
+import ImageCard from '@/components/ui/image-card'
 
 const ImageCardDemo = () => {
   return (
@@ -874,7 +877,7 @@ export default function ImageCard({ imageUrl, caption, className }: Props) {
       },
       usage: {
         code: [
-          `import ImageCard from '@/registry/new-york/ui/image-card'
+          `import ImageCard from '@/components/ui/image-card'
 `,
 
           ` <ImageCard
@@ -896,7 +899,7 @@ export default function ImageCard({ imageUrl, caption, className }: Props) {
       preview: {
         render: InputDemo,
         code: `
-import { Input } from '@/registry/new-york/ui/input'
+import { Input } from '@/components/ui/input'
 
 const InputDemo = () => {
   return (
@@ -940,7 +943,7 @@ export { Input };
       },
       usage: {
         code: [
-          `import { Input } from '@/registry/new-york/ui/input'
+          `import { Input } from '@/components/ui/input'
 `,
 
           `<Input className="w-[200px]" type="email" placeholder="Email" />
@@ -951,7 +954,7 @@ export { Input };
         File: {
           render: InputFileDemo,
           code: `
-import { Input } from '@/registry/new-york/ui/input'
+import { Input } from '@/components/ui/input'
 
 export const InputFileDemo = () => {
   return (
@@ -969,7 +972,7 @@ export const InputFileDemo = () => {
         Disabled: {
           render: InputDisabledDemo,
           code: `
-import { Input } from '@/registry/new-york/ui/input'
+import { Input } from '@/components/ui/input'
 
 export const InputDisabledDemo = () => {
   return (
@@ -988,7 +991,7 @@ export const InputDisabledDemo = () => {
         WithLabel: {
           render: InputWithLabelDemo,
           code: `
-import { Input } from '@/registry/new-york/ui/input'
+import { Input } from '@/components/ui/input'
 
 export const InputWithLabelDemo = () => {
   return (
@@ -1007,8 +1010,8 @@ export const InputWithLabelDemo = () => {
         WithButton: {
           render: InputWithButtonDemo,
           code: `
-import { Button } from "@/registry/new-york/ui/button"
-import { Input } from '@/registry/new-york/ui/input'
+import { Button } from "@/components/ui/button"
+import { Input } from '@/components/ui/input'
 
 export  const InputWithButtonDemo = () => {
   return (
@@ -1039,7 +1042,7 @@ export  const InputWithButtonDemo = () => {
 "use client";
 
 import * as React from "react";
-import { Progress } from "@/registry/new-york/ui/progress";
+import { Progress } from "@/components/ui/progress";
 
 const ProgressDemo = () => {
   const [progress, setProgress] = React.useState(66);
@@ -1155,7 +1158,7 @@ export { Progress };
       usage: {
         code: [
           `import * as React from "react"
-import { Progress } from "@/registry/new-york/ui/progress"
+import { Progress } from "@/components/ui/progress"
 `,
 
           `const [progress, setProgress] = React.useState(66);
@@ -1179,7 +1182,7 @@ import { Progress } from "@/registry/new-york/ui/progress"
 "use client"
 
 import React from "react"
-import { ProfileSelector } from "@/registry/new-york/ui/profile-selector"
+import { ProfileSelector } from "@/components/ui/profile-selector"
 
 const profiles = [
   { name: "Sarah Wilson", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" },
@@ -1298,7 +1301,7 @@ export { ProfileSelector, ProfileItem }
       },
       usage: {
         code: [
-          `import { ProfileSelector } from "@/registry/new-york/ui/profile-selector"`,
+          `import { ProfileSelector } from "@/components/ui/profile-selector"`,
 
           `const profiles = [
   { name: "Sarah Wilson", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" },
@@ -1331,7 +1334,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/components/ui/select"
 
 
 const SelectDemo = () => {
@@ -1559,7 +1562,7 @@ export {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/components/ui/select"
 `,
 
           ` <Select>
@@ -1590,7 +1593,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/components/ui/select"
 
 
 export  function SelectDemo2() {
@@ -1622,7 +1625,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/components/ui/select"
 
 export  function SelectDemo3() {
   return (
@@ -1657,7 +1660,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/components/ui/select"
 
 import {
   ChartBarIcon,
@@ -1713,7 +1716,7 @@ export  function SelectDemo4() {
         render: SwitchDemo,
         code: `
 import React from 'react'
-import { Switch } from "@/registry/new-york/ui/switch"
+import { Switch } from "@/components/ui/switch"
 
 const SwitchDemo = () => {
   return (
@@ -1771,7 +1774,7 @@ export { Switch }
       usage: {
         code: [
           `
-import { Switch } from "@/registry/new-york/ui/switch"
+import { Switch } from "@/components/ui/switch"
 `,
 
           ` <div className="flex items-center space-x-2">
@@ -1794,7 +1797,7 @@ import { Switch } from "@/registry/new-york/ui/switch"
         render: TextareaDemo,
         code: `
 import React from 'react'
-import { Textarea } from "@/registry/new-york/ui/textarea"
+import { Textarea } from "@/components/ui/textarea"
 
 const TextareaDemo = () => {
   return (
@@ -1837,7 +1840,7 @@ export { Textarea };
       usage: {
         code: [
           `
-import { Textarea } from "@/registry/new-york/ui/textarea"
+import { Textarea } from "@/components/ui/textarea"
 
 `,
 
@@ -1859,7 +1862,7 @@ import { Textarea } from "@/registry/new-york/ui/textarea"
         render: TooltipCardDemo,
         code: `
 import React from "react";
-import { TooltipCard } from "@/registry/new-york/ui/tooltip-card";
+import { TooltipCard } from "@/components/ui/tooltip-card";
 
 const TooltipCardDemo = () => {
   return (
@@ -1916,7 +1919,7 @@ export { TooltipCard };
       },
       usage: {
         code: [
-          `import { TooltipCard } from "@/registry/new-york/ui/tooltip-card"
+          `import { TooltipCard } from "@/components/ui/tooltip-card"
 `,
 
           `<TooltipCard
@@ -2110,6 +2113,9 @@ const css = `
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
+  .rounded-base{
+    border-radius:0;
+  }  
 }
 
 /* Neo-Brutal Bounce Animation - plays once on page load */
